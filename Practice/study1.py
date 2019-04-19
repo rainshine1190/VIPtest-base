@@ -1,1 +1,6 @@
-__author__ = 'lc'
+#coding:utf-8
+# __author__ = 'lc'
+
+
+
+print('I am the best!')
