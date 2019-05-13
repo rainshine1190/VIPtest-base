@@ -8,23 +8,20 @@ class Animal:
     def drink(self):
         print('---------喝')
 
-
 class Dog(Animal):
-    # def eat(self):
-    #     print('---------吃')
-    # def drink(self):
-    #     print('---------喝')
     def bark(self):
         print('---------汪汪叫')
-
 
 class Xiaotq(Dog):
     def fly(self):
         print('------飞')
 
     def bark(self):
-        print('-------哮天犬狂叫')
-
+        print('------狂叫')
+        #第一种调用被重写的方法，父类的名字.方法名()
+        Dog.bark(self)
+        #第二种
+        super().bark()
 
 x = Xiaotq()
 x.fly()

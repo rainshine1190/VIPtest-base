@@ -10,10 +10,6 @@ class Animal:
 
 
 class Dog(Animal):
-    # def eat(self):
-    #     print('---------吃')
-    # def drink(self):
-    #     print('---------喝')
     def bark(self):
         print('---------汪汪叫')
 
@@ -29,5 +25,8 @@ class Xiaotq(Dog):
 x = Xiaotq()
 x.fly()
 x.bark()
+
+
+
 #子类可以拥有父类的父类的功能
 x.eat()
