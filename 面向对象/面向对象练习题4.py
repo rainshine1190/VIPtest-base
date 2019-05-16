@@ -18,6 +18,7 @@ class Gun():
     def __str__(self):
         return "%s有%d发子弹" % (self.name,self.bullet_count)
 
+
 class Soilder:
 
     def __init__(self,gun):
