@@ -11,9 +11,9 @@
 
 class Gun():
 
-    def __init__(self,name,bullet_count):
+    def __init__(self,name):
         self.name = name
-        self.bullet_count = bullet_count
+        self.bullet_count = 0
 
     def __str__(self):
         return "制造一把%s有%d发子弹" % (self.name,self.bullet_count)
@@ -37,8 +37,10 @@ class Soilder:
         return "士兵%s" % self.name
 
     def fire(self,item):
+
         if item.bullet_count > 0 :
             # print('%s子弹充足，进行射击' % item.name)
+            print('士兵射击')
             item.shot()
         else:
             print('%s子弹不足，需要装填子弹' % item.name)
@@ -46,7 +48,7 @@ class Soilder:
 
 
 
-AK = Gun("AK47",0)
+AK = Gun("AK47")
 print(AK)
 
 s1 = Soilder('瑞恩')
