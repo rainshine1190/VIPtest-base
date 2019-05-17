@@ -29,15 +29,15 @@ class Gun():
 
 class Soilder:
 
-    def __init__(self,gun):
-        self.gun = gun
-        self.bullet = 0
+    def __init__(self,name):
+        self.name = name
+        # self.bullet = 0
 
     def __str__(self):
-        return "士兵有一把 %s" % self.gun.name
+        return "士兵%s" % self.name
 
     def fire(self,item):
-        if item.bullet_count > 0:
+        if item.bullet_count > 0 :
             # print('%s子弹充足，进行射击' % item.name)
             item.shot()
         else:
@@ -46,10 +46,10 @@ class Soilder:
 
 
 
-AK = Gun("AK47",3)
+AK = Gun("AK47",0)
 print(AK)
 
-s1 = Soilder(AK)
+s1 = Soilder('瑞恩')
 print(s1)
 s1.fire(AK)
 s1.fire(AK)
