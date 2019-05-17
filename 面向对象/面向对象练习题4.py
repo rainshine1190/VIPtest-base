@@ -38,7 +38,7 @@ class Soilder:
 
     def fire(self,item):
         if item.bullet_count > 0:
-            print('%s子弹充足，进行射击' % item.name)
+            # print('%s子弹充足，进行射击' % item.name)
             item.shot()
         else:
             print('%s子弹不足，需要装填子弹' % item.name)
