@@ -12,6 +12,10 @@
 # 3）.将以上三件家具添加到房子中
 # 4）.打印房子时，要求输出:户型，总面积，剩余面积，家具名称列表
 
+
+
+
+
 class House:
 
     def __init__(self,apartment,total_area):
@@ -31,6 +35,7 @@ class House:
             self.residue = self.residue - item.cover_area
             self.item_list.append(item.name)
             print("给房子添加家具：%s" % item.name)
+
 
 class Furniture:
 
