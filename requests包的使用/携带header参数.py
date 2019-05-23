@@ -9,21 +9,20 @@ import requests
 
 # 发送GET请求
 
-urlstr = 'https://www.wanandroid.com/blog/show/2'
+urlstr = 'https://www.wanandroid.com/user/login'
 
 header = {'User-Agent':'Mozilla/6.0'}
 
-cookie = {'Set-Cookie':'JSESSIONID=7FD4638D18876336AFDF8DA8C3DD8B95'}
+payload = {'username':'chaoge','password':'123456'}
 
 #2---发送请求
-s = requests.session()
 
-r  = s.get(url=urlstr,headers=header,cookies=cookie)
+
+r  = requests.post(url=urlstr,data= payload,headers=header)
 
 #3---获取结果
-# print(r.text)
+print(r.text)
 print(r.headers)
-print(r.cookies)
 
 
 

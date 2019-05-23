@@ -7,13 +7,20 @@ import requests
 
 # 发送GET请求
 
-urlstr = 'https://www.wanandroid.com/blog/show/2'
+urlstr = 'https://blog.csdn.net/rainshine1190'
 
 #2---发送请求
 r  = requests.get(url=urlstr)
 
+print(r.text)
+
+
+print(r.content)
+r.encoding = 'gbk'
+print(r.encoding)
 #3---获取结果
 print(r.text)
+#查看响应头
 print(r.headers)
 
 

@@ -10,10 +10,10 @@ import requests
 urlstr = 'https://www.wanandroid.com/article/query'
 
 #参数
-param = {'k':'Android'}
+payload = {'k':'Android'}
 
 #2---发送请求
-r  = requests.get(url=urlstr,params=param)
+r  = requests.get(url=urlstr,params=payload)
 
 #3---获取结果
 print(r.text)

@@ -97,10 +97,46 @@
 #
 # print(mul(5))
 
+#
+# def fbnq(n):
+#     print(a)
+#     c = a + b
+#     a = b
+#     b = c
 
-def fbnq(n):
-    print(a)
-    c = a + b
-    a = b
-    b = c
+#
+# import requests
+# help(requests.session())
 
+
+
+# import json
+# help(json)
+
+
+
+# coding:utf-8
+import requests
+body = {"key1": "value1",
+        "key2": "value2"}  # 这里账号密码就是抓包的数据
+
+s = requests.session()
+login_url = "http://xxx.login"   #　自己找带token网址
+
+login_ret = s.post(login_url, data=body)
+
+# 这里token在返回的json里，可以直接提取
+token = login_ret.json()["token"]
+
+# 这是登录后发的一个post请求
+post_url = "http://xxx"
+header = {}
+# 添加token到请求头
+header["token"] = token
+# 如果这个post请求的头部其它参数变了，也可以直接更新
+header["Content-Length"]="9"
+body1 = {
+         "key": "value"
+         }
+post_ret = s.post(post_url, headers=header, data=body1)
+print(post_ret.content)

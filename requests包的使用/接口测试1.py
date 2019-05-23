@@ -86,3 +86,6 @@ __author__ = 'lc'
 # r = requests.get(url, timeout=2.5)
 
 
+import requests
+
+help(requests)
