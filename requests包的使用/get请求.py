@@ -10,7 +10,7 @@ import requests
 urlstr = 'https://blog.csdn.net/rainshine1190'
 
 #2---发送请求
-r  = requests.get(url=urlstr)
+r  = requests.get(url=urlstr,timeout=5)
 
 print(r.text)
 
