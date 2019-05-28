@@ -9,6 +9,9 @@
 # 4）.枪 能够 装填子弹 --增加子弹的数量
 
 
+
+
+
 class Gun():
 
     def __init__(self,name):
