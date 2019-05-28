@@ -98,9 +98,15 @@
 # print(mul(5))
 
 
-def fbnq(n):
-    print(a)
-    c = a + b
-    a = b
-    b = c
+# def fbnq(n):
+#     print(a)
+#     c = a + b
+#     a = b
+#     b = c
 
+def abc():
+    assert "n" == "n"
+    print('ok')
+
+
+abc()
