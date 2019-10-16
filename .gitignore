@@ -7,7 +7,7 @@ __pycache__/
 
 # C extensions
 *.so
-
+.idea
 # Distribution / packaging
 .Python
 build/
@@ -107,3 +107,4 @@ venv.bak/
 
 .gitignore
 .idea/
+"Practice/\345\255\227\345\205\270\346\216\222\345\272\217.py"
