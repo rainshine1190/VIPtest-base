@@ -1,8 +1,8 @@
 #coding:utf-8
 
 import unittest
-from myfun import *
 
+from Pra_unittest.myfun import *
 
 
 class TestMyFun(unittest.TestCase):
@@ -37,5 +37,9 @@ class TestMyFun(unittest.TestCase):
     def test_divide(self):
         self.assertEqual(2, divide(6, 3))  # 测试业务方法divide
         self.assertEqual(2.5, divide(5, 2))
+
+
+
 if __name__ == '__main__':
-    unittest.main(verbosity=2)
+    unittest.main(verbosity=0)
+

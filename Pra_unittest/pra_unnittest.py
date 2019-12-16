@@ -10,7 +10,7 @@
 
 
 import unittest
-from practice.test_math import Math
+from Practice.test_math import Math
 
 
 #继承unittest.TestCase
@@ -29,7 +29,7 @@ class MyTest(unittest.TestCase):
         print('执行add1方法')
         print('--1')
         d = Math(1,2)
-        expect = d.add()
+        expect = d.add1()
         self.assertEqual(expect,3)
 
 
@@ -37,7 +37,7 @@ class MyTest(unittest.TestCase):
         print('执行add2方法')
         print('--2')
         d = Math(1,3)
-        expect = d.add()
+        expect = d.add2()
         try:
             self.assertEqual(expect,3)
         except AssertionError as msg:
@@ -55,7 +55,8 @@ if __name__ == '__main__':
     print('----------------------------------')
     suite = unittest.TestSuite()
     suite.addTest(MyTest('test_add1'))
-    print('---',suite)
+    # suite.addTests(MyTest('test_add1'),MyTest('test_add2'))
+    print('---suite',suite)
     # suite.addTest(MyTest.test_add1)
     runner = unittest.TextTestRunner()
     runner.run(suite)
