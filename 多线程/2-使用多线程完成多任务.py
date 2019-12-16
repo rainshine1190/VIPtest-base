@@ -14,6 +14,7 @@ def test(*param):
 
 
 for i in range(5):
+    print('***',i)
     # test()
     #采用多线程修改
     t = Thread(target=test,args=(1,2))

@@ -1,8 +1,8 @@
 #coding:utf-8
 
 import unittest
-from test_myfun import TestMyFun
-from HTMLTestRunner import HTMLTestRunner
+
+from Pra_unittest.test_myfun import TestMyFun
 
 if __name__ == '__main__':
     suite = unittest.TestSuite()
