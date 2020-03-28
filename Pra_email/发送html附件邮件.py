@@ -62,22 +62,7 @@ def send_mail_html(file):
         smtp.quit()
 
 
-def find_new_file(dir):
-    '''查找目录下最新的文件'''
-    file_lists = os.listdir(dir)
-    file_lists.sort(key=lambda fn: os.path.getmtime(dir + "\\" + fn)
-                    if not os.path.isdir(dir + "\\" + fn)
-                    else 0)
-    # print('最新的文件为： ' + file_lists[-1])
-    file = os.path.join(dir, file_lists[-1])
-    print('完整文件路径：', file)
-    return file
 
-
-# dir = 'D:\\test_data\\auto_test_result'  # 指定文件目录
-# file = find_new_file(dir)  # 查找最新的html文件
-file = "E:\\code\\VIPtest2\\Pra_unittest\\test.html"
-send_mail_html(file)  # 发送html内容邮件
 
 
 
