@@ -25,7 +25,7 @@ def send_mail_html(file):
     smtpserver = 'smtp.126.com'
     # 发送邮箱用户/密码
     username = 'rainshine1190'
-    password = '881109.com'
+    password = 'xxx'
 
     # 读取html文件内容
     with open(file,'rb') as f:
