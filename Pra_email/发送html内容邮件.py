@@ -24,6 +24,8 @@ content = "邮件内容，我是邮件内容，哈哈哈"
 #
 # 生成一个MIMEText对象（还有一些其它参数）
 msg = MIMEText(content)
+#或
+msg = MIMEText(content,'plain','utf-8')
 # 放入邮件主题
 msg['Subject'] = subject
 # 也可以这样传参
