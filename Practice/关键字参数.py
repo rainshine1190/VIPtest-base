@@ -29,7 +29,7 @@ def person(**kwargs):
 
 
 
-db = {'host': '10.110.83.85', 'port': '4002', 'user': 'task_inyuapp_rw', 'pwd': 'gh31mllgcUrobfamdaWl', 'database': 'task_inyuapp'}
+db = {}
 print(type(db))
 person(**db)
 # person('xiaoming',21)

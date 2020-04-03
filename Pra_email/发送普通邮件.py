@@ -26,7 +26,7 @@ def sendMail():
     smtpserver = 'smtp.126.com'
     # 发送邮箱用户/密码
     username = 'rainshine1190'
-    password = '881109.com'
+    password = 'xxxx'
     content = 'Python 邮件发送测试...'
 
     #第二步： 组装邮件内容和标题，中文需参数‘utf-8’，单字节字符不需要
