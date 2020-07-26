@@ -34,6 +34,10 @@ class Person(object):
 a1 = Person('大明',15)
 
 #通过实例对象调用类方法
+#调用实例方法：实例名.方法名
+
+a1.fun1('math')
+#调用类方法：1-实例名.方法名;2-类名.方法名
 print(a1.fun2())
 print(Person.fun2())
 

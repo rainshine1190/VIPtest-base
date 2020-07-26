@@ -7,7 +7,12 @@ class Person(object):
     #定义私有属性
     __money = 1000
 
+    _hello = 'happy'
+
     color = 'yellow'
+
+    def get_money(self):
+        return self.__money
 
     #构造方法，定义实例属性
     def __init__(self,name,age):
@@ -23,14 +28,16 @@ class Person(object):
     def __str__(self):
         '''返回一个对象的描述信息'''
         #类内部引用私有属性
-        return "颜色是{},存款有{}".format(self.color,self.__money)
+        return "颜色是{},存款有{}".format(self.color,self.__money,self._hello)
 
 a1 = Person('大明',15)
 
 print(a1)
-
-#类的外包引用私有属性
+print(a1._hello)
+#类的外部引用私有属性
 print(a1.__money)
+print(a1.get_money())
+
 
 
 #总结:

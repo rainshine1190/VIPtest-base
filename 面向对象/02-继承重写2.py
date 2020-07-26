@@ -17,6 +17,7 @@ class Xiaotq(Dog):
         print('------飞')
 
     def bark(self):
+
         print('------狂叫')
         #第一种调用被重写的方法，父类的名字.方法名()
         Dog.bark(self)

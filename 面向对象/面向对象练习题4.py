@@ -9,6 +9,37 @@
 # 4）.枪 能够 装填子弹 --增加子弹的数量
 
 '''
+需求分析
+
+类：士兵
+
+
+属性：名字
+
+
+方法：
+    开火
+        士兵 枪 ，发射
+
+#-------------------
+类：枪
+
+
+属性：
+    子弹 = 0
+    名字
+
+
+方法：
+    发射
+        判断当前子弹数量
+            子弹会减少
+            没子弹
+
+    装填
+
+        子弹增加
+
 
 '''
 
@@ -44,7 +75,6 @@ class Soilder:
         return "士兵%s" % self.name
 
     def fire(self,item):
-
         if item.bullet_count > 0 :
             # print('%s子弹充足，进行射击' % item.name)
             print('士兵射击')
@@ -53,14 +83,36 @@ class Soilder:
             print('%s子弹不足，需要装填子弹' % item.name)
             item.add_bullet()
 
+    def fun(self,a):
+        print('a:',a)
+
+
+
+
 
 
 AK = Gun("AK47")
-print(AK)
 
-s1 = Soilder('瑞恩')
-print(s1)
-s1.fire(AK)
-s1.fire(AK)
-s1.fire(AK)
-s1.fire(AK)
+print(AK.name)
+print(AK.bullet_count)
+AK.add_bullet()
+AK.shot()
+
+
+s = Soilder('瑞恩')
+s.fire(AK)
+
+b = 5
+
+s.fun(b)
+
+
+
+
+#
+# s1 = Soilder('瑞恩')
+# print(s1)
+# s1.fire(AK)
+# s1.fire(AK)
+# s1.fire(AK)
+# s1.fire(AK)

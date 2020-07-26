@@ -21,12 +21,18 @@ class Xiaotq(Dog):
     def bark(self):
         print('-------哮天犬狂叫')
 
+    def can(self):
+        self.fly()
+        self.bark()
+        super().bark()
+
 
 x = Xiaotq()
-x.fly()
-x.bark()
-
-
-
-#子类可以拥有父类的父类的功能
-x.eat()
+# x.fly()
+# x.bark()
+#
+# #重写：1-必须继承父类；2-重写的方法必须和父类的方法重名（一模一样）
+#
+# #子类可以拥有父类的父类的功能
+# x.eat()
+x.can()

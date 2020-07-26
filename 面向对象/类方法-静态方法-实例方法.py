@@ -31,6 +31,7 @@ g1 = Game()
 Game.add_num()
 #还可以通过这个类创建出来的对象去调用这个类方法
 g1.add_num()
+
 print(Game.num)
 
 #通过类 去调用静态方法
