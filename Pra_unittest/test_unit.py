@@ -1,10 +1,10 @@
+#coding:utf-8
 #__author__ = 'lc'
 '''
-¹¦ÄÜ£º
-    1.½²½âunittest×°ÊÎÆ÷¹æ·¶
+åŠŸèƒ½ï¼š
+    1.è®²è§£unittestè£…é¥°å™¨è§„èŒƒ
 
 '''
-
 
 
 class Aplus:

@@ -2,7 +2,7 @@
 
 import unittest
 
-from Pra_unittest.test_myfun import TestMyFun
+from Pra_unittest.跳过和verbosity的学习 import TestMyFun
 
 if __name__ == '__main__':
     suite = unittest.TestSuite()

@@ -154,39 +154,52 @@ run：weight - xx斤
 
 
 """
-# #定义一个类.地瓜
-class Potato(object):
-    #定义构造函数.初始化属性.  时间0,状态生的,不加调料
-    def __init__(self):
-        self.status = "生的"
-        self.time = 0
-        self.cooper = []
+# # #定义一个类.地瓜
+# class Potato(object):
+#     #定义构造函数.初始化属性.  时间0,状态生的,不加调料
+#     def __init__(self):
+#         self.status = "生的"
+#         self.time = 0
+#         self.cooper = []
+#
+#     #定义cook烤地瓜方法.
+#     def cook(self, time,cooper=''):
+#         #
+#         self.cooper.append(cooper)
+#         self.time = self.time + time
+#         if 0 <= self.time < 3:
+#             self.status = "生的"
+#         elif 3 <= self.time < 5:
+#             self.status = "半生不熟"
+#         elif 5 <= self.time < 8:
+#             self.status = "熟的"
+#         else:
+#             self.status = "烤糊了"
+#
+#
+#
+#     def __str__(self):
+#         #定义类的解释
+#         return "这个地瓜考了{0}分钟,状态是{1},调料：{2}".format(self.time, self.status, self.cooper)
+#
+#
+# p = Potato()
+# print(p)
+#
+# p.cook(2,'孜然')
+# print(p)
+# p.cook(2,'辣椒')
+# print(p)
 
-    #定义cook烤地瓜方法.
-    def cook(self, time,cooper=''):
-        #
-        self.cooper.append(cooper)
-        self.time = self.time + time
-        if 0 <= self.time < 3:
-            self.status = "生的"
-        elif 3 <= self.time < 5:
-            self.status = "半生不熟"
-        elif 5 <= self.time < 8:
-            self.status = "熟的"
-        else:
-            self.status = "烤糊了"
+
+title = ["id","interfaceUrl","name","Method","value","expect","real","status"]
+case = ['1', 'https://www.wanandroid.com/user/login', 'login', 'post', "{'username':'liangchao','password':'123456'}", '0', '', '']
+
+dict1 = {title[i]:case[i] for i in range(len(title))}
+print(dict1)
 
 
 
-    def __str__(self):
-        #定义类的解释
-        return "这个地瓜考了{0}分钟,状态是{1},调料：{2}".format(self.time, self.status, self.cooper)
 
 
-p = Potato()
-print(p)
 
-p.cook(2,'孜然')
-print(p)
-p.cook(2,'辣椒')
-print(p)

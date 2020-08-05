@@ -12,6 +12,7 @@ import requests
 urlstr = 'https://www.wanandroid.com/user/login'
 
 payload = {'username':'chaoge','password':'123456'}
+print(type(payload))
 
 #2---发送请求
 r  = requests.post(url=urlstr,data=payload)
