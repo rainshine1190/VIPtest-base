@@ -192,11 +192,28 @@ run：weight - xx斤
 # print(p)
 
 
-title = ["id","interfaceUrl","name","Method","value","expect","real","status"]
-case = ['1', 'https://www.wanandroid.com/user/login', 'login', 'post', "{'username':'liangchao','password':'123456'}", '0', '', '']
+# title = ["id","interfaceUrl","name","Method","value","expect","real","status"]
+# case = ['1', 'https://www.wanandroid.com/user/login', 'login', 'post', "{'username':'liangchao','password':'123456'}", '0', '', '']
+#
+# dict1 = {title[i]:case[i] for i in range(len(title))}
+# print(dict1)
 
-dict1 = {title[i]:case[i] for i in range(len(title))}
-print(dict1)
+import xlrd
+
+excel = xlrd.open_workbook()
+sheet = excel.sheet_by_index()
+excel.sheet_by_name()
+
+sheet.nrows
+sheet.ncols
+
+sheet.row_values()
+sheet.col_values()
+
+
+sheet.cell_value()
+
+
 
 
 
