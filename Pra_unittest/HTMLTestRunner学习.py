@@ -21,7 +21,6 @@ class myTest(unittest.TestCase):
 if __name__ == "__main__":
     # 默认全部运行
     # unittest.main()
-
     #生成测试报告
     suite = unittest.TestSuite()
     suite.addTest(myTest('test_add'))
