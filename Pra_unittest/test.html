@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>单元测试报告</title>
-    <meta name="generator" content="HTMLTestRunner 0.8.2.1"/>
+    <meta name="generator" content="HTMLTestReportCN 0.8.3"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
     <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
@@ -35,8 +35,8 @@ table       { font-size: 100%; }
 <div class='heading'>
 <h1 style="font-family: Microsoft YaHei">单元测试报告</h1>
 <p class='attribute'><strong>测试人员 : </strong> QA</p>
-<p class='attribute'><strong>开始时间 : </strong> 2020-08-09 16:15:28</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:00</p>
+<p class='attribute'><strong>开始时间 : </strong> 2020-11-14 17:56:56</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:00.000996</p>
 <p class='attribute'><strong>测试结果 : </strong> 共 1，通过 1，通过率= 100.00%</p>
 
 <p class='description'>我是描述</p>
@@ -45,15 +45,14 @@ table       { font-size: 100%; }
 
 <p id='show_detail_line'>
 <a class="btn btn-primary" href='javascript:showCase(4)'>概要{ 100.00% }</a>
-<a class="btn btn-warning" href='javascript:showCase(2)'>错误{ 0 }</a>
-<a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
 <a class="btn btn-success" href='javascript:showCase(0)'>通过{ 1 }</a>
+<a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
+<a class="btn btn-warning" href='javascript:showCase(2)'>错误{ 0 }</a>
 <a class="btn btn-info" href='javascript:showCase(3)'>所有{ 1 }</a>
 </p>
 <table id='result_table' class="table table-condensed table-bordered table-hover">
 <colgroup>
 <col align='left' />
-<col align='right' />
 <col align='right' />
 <col align='right' />
 <col align='right' />
@@ -67,30 +66,27 @@ table       { font-size: 100%; }
     <td>失败</td>
     <td>错误</td>
     <td>详细</td>
-    <td>截图</td>
 </tr>
 
-<tr class='passClass'>
+<tr class='success'>
     <td>myTest</td>
     <td class="text-center">1</td>
     <td class="text-center">1</td>
     <td class="text-center">0</td>
     <td class="text-center">0</td>
     <td class="text-center"><a href="javascript:showClassDetail('c1',1)" class="detail" id='c1'>详细</a></td>
-    <td class="text-center">Assert or Error Image</td>
 </tr>
 
 <tr id='pt1_1' class='hiddenRow'>
     <td class='passCase'><div class='testcase'>test_add</div></td>
-    <td colspan='5' align='left'>
+    <td colspan='5' align='center'>
     <!--默认收起output信息 -Findyou
     <button id='btn_pt1_1' type="button"  class="btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
     <div id='div_pt1_1' class="collapse">  -->
-
     <!-- 默认展开output信息 -Findyou -->
     <button id='btn_pt1_1' type="button"  class="btn-xs" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
     <div id='div_pt1_1' class="collapse in">
-    <pre style="overflow-y:scroll; overflow-x:hidden;height:300px; width:600px; margin:auto; border:1px solid #e1e1e1;">
+    <pre>
     
 pt1_1: 执行setup方法
 执行tearDown方法
@@ -99,14 +95,7 @@ pt1_1: 执行setup方法
     </pre>
     </div>
     </td>
-    <td align="right">
-        <a hidden="hidden" href="">
-            <img   src="" height="622px" width="350px"/>
-        </a>
-    </td>
 </tr>
-
-
 
 <tr id='total_row' class="text-center info">
     <td>总计</td>
@@ -115,7 +104,6 @@ pt1_1: 执行setup方法
     <td>0</td>
     <td>0</td>
     <td>通过率：100.00%</td>
-    <td> <a href="" target="_blank"></a></td>
 </tr>
 </table>
 
@@ -127,11 +115,9 @@ pt1_1: 执行setup方法
 <script language="javascript" type="text/javascript">
 output_list = Array();
 // 修改按钮颜色显示错误问题 --Findyou v0.8.2.3
-
 $("button[id^='btn_pt']").addClass("btn btn-success");
 $("button[id^='btn_ft']").addClass("btn btn-danger");
 $("button[id^='btn_et']").addClass("btn btn-warning");
-
 /*level
 增加分类并调整，增加error按钮事件 --Findyou v0.8.2.3
 0:Pass    //pt none, ft hiddenRow, et hiddenRow
@@ -140,6 +126,7 @@ $("button[id^='btn_et']").addClass("btn btn-warning");
 3:All     //pt none, ft none, et none
 4:Summary //all hiddenRow
 */
+//add Error button event --Findyou v0.8.2.3
 function showCase(level) {
     trs = document.getElementsByTagName("tr");
     for (var i = 0; i < trs.length; i++) {
@@ -173,22 +160,22 @@ function showCase(level) {
     //加入【详细】切换文字变化 --Findyou
     detail_class=document.getElementsByClassName('detail');
 	//console.log(detail_class.length)
-    if (level == 3) {
-        for (var i = 0; i < detail_class.length; i++){
-            detail_class[i].innerHTML="收起"
-        }
-    }
-    else{
-            for (var i = 0; i < detail_class.length; i++){
-            detail_class[i].innerHTML="详细"
-        }
-    }
+	if (level == 3) {
+		for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="收起"
+		}
+	}
+	else{
+			for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="详细"
+		}
+	}
 }
+//add Error button event --Findyou v0.8.2.3
 function showClassDetail(cid, count) {
     var id_list = Array(count);
     var toHide = 1;
     for (var i = 0; i < count; i++) {
-        //ID修改 点 为 下划线 -Findyou
         tid0 = 't' + cid.substr(1) + '_' + (i+1);
         tid = 'f' + tid0;
         tr = document.getElementById(tid);
@@ -225,6 +212,5 @@ function html_escape(s) {
     return s;
 }
 </script>
-
 </body>
 </html>

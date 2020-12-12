@@ -12,7 +12,7 @@ from email.mime.text import MIMEText
 from email.header import Header
 
 
-def send_mail_html(file):
+def send_mail_html():
     '''发送html内容邮件-非附件形式，即直接在邮件中显示html'''
     #第一步：配置邮箱属性
     # 发送邮箱
@@ -27,7 +27,7 @@ def send_mail_html(file):
     # 发送邮箱用户/密码
     username = 'rainshine1190'
     password = '881109.com'
-
+    file = 'xxxx/report.html'
     # 读取html文件内容
     with open(file,'rb') as f:
         mail_body = f.read()
@@ -66,5 +66,6 @@ def send_mail_html(file):
 
 
 
+if __name__ == '__main__':
 
-send_mail_html('test.html')
+    send_mail_html('test.html')

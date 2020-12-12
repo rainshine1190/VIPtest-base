@@ -1,7 +1,28 @@
+"""
+功能描述：读取Excel的测试数据
+编写人：
+编写日期：
+实现步骤：
+    1-打开excel
+    2-确定sheet页
+    3-确定数据所在的行和列
+    4-读取一行数据
+    5-迭代读取所有行，放入列表
+    6-返回目标数据
+
+
+"""
+
+
+
+
+
 #coding:utf-8
 __author__ = 'lc'
 
-import unittest,HTMLTestRunner
+import unittest
+from HTMLTestRunner import HTMLTestReportCN
+
 from myfun import *
 
 class myTest(unittest.TestCase):
@@ -26,6 +47,6 @@ if __name__ == "__main__":
     suite.addTest(myTest('test_add'))
     filename = "test.html"
     fp = open(filename,'wb')
-    runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title='单元测试报告', description='我是描述')
+    runner = HTMLTestReportCN(stream=fp, title='单元测试报告', description='我是描述')
     runner.run(suite)
     fp.close()

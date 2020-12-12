@@ -30,9 +30,15 @@ if __name__ == "__main__":
     #调用addTest方法
     suite.addTest(myTest('test_add'))
 
-    print('suite内：',suite)
+    print('suite内容：',suite)
 
-    #生成测试报告
+    #------------------------------testrunner示例
+    runner = unittest.TextTestRunner()
+    runner = unittest.TestRunner()
+    runner.run(suite)
+
+
+    #--------------------------------通过HtmlTestRunner运行并生成测试报告
     # suite = unittest.TestSuite()
     # suite.addTest(myTest('test_add'))
     # filename = "E:\\code\\VIPtest2\\Pra_unittest\\test.html"

@@ -27,7 +27,9 @@ if __name__ == "__main__":
     #1-实例化testSuite
     suite = unittest.TestSuite()
     #2-调用addTest方法
-    suite.addTest(myTest('test_add'))
+    # suite.addTest(myTest('test_add'))
+
+    suite.addTests((myTest('test_add'),myTest('test_mul')))
     #查看suite的内容
     print('suite内：',suite)
 

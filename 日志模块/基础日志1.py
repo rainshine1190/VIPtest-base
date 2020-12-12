@@ -42,9 +42,7 @@ logger.warning("warning")
 #1、导入Logging包
 import logging
 
-
 def log():
-
 
     #2、设置基础配置信息(level：日志级别，格式：)
     logging.basicConfig(level=logging.INFO,format='%(asctime)s-%(name)s-%(levelname)s-%(message)s')
