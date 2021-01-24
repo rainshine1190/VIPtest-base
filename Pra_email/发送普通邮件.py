@@ -7,11 +7,11 @@ __author__ = 'lc'
 编写人：
 实现步骤：
     1-配置邮箱属性
-    2-组装邮件内容和标题，中文需参数‘utf-8’，单字节字符不需要
+    2-组装邮件内容和标题
+    3-登录并发送邮件
 
 """
 from smtplib import SMTP
-
 # 发送html内容的邮件
 import smtplib, time, os
 from email.mime.text import MIMEText
@@ -35,7 +35,8 @@ def sendMail():
     username = 'rainshine1190'
     #注意：如果邮箱从未开启过pop3/smtp服务，则需要进入邮箱设置开启，开启成功后会提示一个授权码，把此处的密码替换为生成的授权码即可
     password = 'IAVEGDPLRCJFEVON'
-    # password = '881109.net'
+    # password = 'xxxx'
+    #邮件内容
     content = 'Python 邮件发送测试...'
 
     #第二步： 组装邮件内容和标题，中文需参数‘utf-8’，单字节字符不需要
@@ -64,7 +65,7 @@ def sendMail():
 
 
 
-
-#调试发送邮件
-sendMail()
+if __name__ == '__main__':
+    #调试发送邮件
+    sendMail()
 

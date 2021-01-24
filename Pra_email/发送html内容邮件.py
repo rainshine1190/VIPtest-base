@@ -46,7 +46,7 @@ try:
     # 发送邮件：发送方，收件方，要发送的消息通过as_string来作为字符串传递
     s.sendmail(sender, receiver, msg.as_string())
     print('成功')
-except s.SMTPException as e:
+except Exception as e:
     print(e)
 finally:
     s.quit()

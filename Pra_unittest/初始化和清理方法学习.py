@@ -25,12 +25,10 @@ class TestMyFun(unittest.TestCase):
         print("这里是一个测试用例后的清理工作")
 
     def test_add(self):
+        print('这里是运行的test开头的用例')
         self.assertEqual(3, add(1, 2))
         self.assertEqual(1,2,'1!=2')
         self.assertNotEqual(3, add(2, 2))  # 测试业务方法add
-
-
-
 
 if __name__ == '__main__':
     unittest.main()

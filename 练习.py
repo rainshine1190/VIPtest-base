@@ -198,24 +198,26 @@ run：weight - xx斤
 # dict1 = {title[i]:case[i] for i in range(len(title))}
 # print(dict1)
 
-import xlrd
+# import xlrd
+#
+# excel = xlrd.open_workbook()
+# sheet = excel.sheet_by_index()
+# excel.sheet_by_name()
+#
+# sheet.nrows
+# sheet.ncols
+#
+# sheet.row_values()
+# sheet.col_values()
+#
+#
+# sheet.cell_value()
 
-excel = xlrd.open_workbook()
-sheet = excel.sheet_by_index()
-excel.sheet_by_name()
+list1 = ['1','2','3']
+list2 = [3,4,5]
 
-sheet.nrows
-sheet.ncols
-
-sheet.row_values()
-sheet.col_values()
-
-
-sheet.cell_value()
-
-
-
-
+dict1 = {list1[i]:list2[i] for i in range(len(list2))}
+print(dict1)
 
 
 

@@ -68,7 +68,7 @@ if __name__ == '__main__':
     #     runner.run(discover)
 
 
-    # discover = unittest.defaultTestLoader.discover('E:\code\VIPtest2\Pra_unittest',pattern='test_unnittest*.py',top_level_dir=None)
+    # discover = unittest.defaultTestLoader.discover('E:\code\VIPbase\Pra_unittest',pattern='test_unnittest*.py',top_level_dir=None)
     # print('------discover',discover)
     # runner = unittest.TextTestRunner()
     # runner.run(discover)

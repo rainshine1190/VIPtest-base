@@ -41,7 +41,7 @@ if __name__ == "__main__":
     #--------------------------------通过HtmlTestRunner运行并生成测试报告
     # suite = unittest.TestSuite()
     # suite.addTest(myTest('test_add'))
-    # filename = "E:\\code\\VIPtest2\\Pra_unittest\\test.html"
+    # filename = "E:\\code\\VIPbase\\Pra_unittest\\test.html"
     # fp = open(filename,'wb')
     # runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title='单元测试报告', description='我是描述')
     # runner.run(suite)
