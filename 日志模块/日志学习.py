@@ -48,7 +48,7 @@ class Logger(object):
                                   '日志信息：%(message)s')
 
         #***指定日志输出目录
-        self._log_dir = pro_dir + "\\" + "Logs"
+        self._log_dir = pro_dir + "\\日志模块"
 
         # 创建日志实例，日志名称用来唯一确定同一个日志对象
         self._logger = logging.getLogger('automation_log')
