@@ -2,7 +2,7 @@
 __author__ = 'lc'
 
 from threading import Thread
-import time
+import my_module1
 
 g_num = 0
 
@@ -25,7 +25,7 @@ def test2():
 t1 = Thread(target=test1)
 t1.start()
 
-time.sleep(3)         #线程共享全局变量，有时候会发生问题，计算后不一致
+my_module1.sleep(3)         #线程共享全局变量，有时候会发生问题，计算后不一致
 
 t2 = Thread(target=test2)
 t2.start()

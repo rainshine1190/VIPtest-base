@@ -3,7 +3,7 @@ __author__ = 'lc'
 
 
 from selenium import webdriver
-import time
+import my_module1
 
 
 def startBrowser():
@@ -11,7 +11,7 @@ def startBrowser():
     driver = webdriver.Chrome()
     driver.get("http://www.baidu.com")
     driver.maximize_window()
-    time.sleep(5)
+    my_module1.sleep(5)
     driver.close()
 
 startBrowser()

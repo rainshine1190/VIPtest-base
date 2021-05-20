@@ -4,13 +4,13 @@ __author__ = 'lc'
 
 
 
-import  unittest
+import  my_module1
 from ddt import ddt,data,unpack
 
 list1 = [5,6,7]
 
 @ddt
-class Mytest1(unittest.TestCase):
+class Mytest1(my_module1.TestCase):
     #单次执行，传递单个参数（该方法一共执行一遍）
     @data(1)
     def test_bb1(self,value):
@@ -30,7 +30,7 @@ class Mytest1(unittest.TestCase):
         self.assertEqual(value, 2)
 
 if __name__ == '__main__':
-    unittest.main(verbosity=2)
+    my_module1.main(verbosity=2)
 
 
 

@@ -12,16 +12,18 @@
 所以返回 [0, 1]
 """
 
-nums = [2,7,11,15,0,9]
-target = 9
-
-for j in range(len(nums)):
-    for i in range(j+1,len(nums)):
-        print('两值相加：',nums[j],nums[i])
-        sum = nums[j] + nums[i]
-        if sum == target:
-            print('下标为--：',j,i)
-
-
+# nums = [2,7,11,15,0,9]
+# target = 9
+#
+# for j in range(len(nums)):
+#     for i in range(j+1,len(nums)):
+#         print('两值相加：',nums[j],nums[i])
+#         sum = nums[j] + nums[i]
+#         if sum == target:
+#             print('下标为--：',j,i)
 
 
+
+list1 = ['c','e','f']
+
+print(''.join(list1))

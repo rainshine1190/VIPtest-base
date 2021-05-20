@@ -1,10 +1,10 @@
 #coding:utf-8
 __author__ = 'lc'
 
-import unittest,HTMLTestRunner
+import my_module1,HTMLTestRunner
 from myfun import *
 
-class myTest(unittest.TestCase):
+class myTest(my_module1.TestCase):
 
 
     def setUp(self):
@@ -26,15 +26,15 @@ if __name__ == "__main__":
     # unittest.main()
     #------------------------------testSuite示例
     #实例化testSuite
-    suite = unittest.TestSuite()
+    suite = my_module1.TestSuite()
     #调用addTest方法
     suite.addTest(myTest('test_add'))
 
     print('suite内容：',suite)
 
     #------------------------------testrunner示例
-    runner = unittest.TextTestRunner()
-    runner = unittest.TestRunner()
+    runner = my_module1.TextTestRunner()
+    runner = my_module1.TestRunner()
     runner.run(suite)
 
 

@@ -7,18 +7,18 @@
 
 
 import threading
-import time
+import my_module1
 
 def run():
     #获取当前线程的名称
     print("task",threading.current_thread().getName())
-    time.sleep(1)
+    my_module1.sleep(1)
     print('2s')
-    time.sleep(1)
+    my_module1.sleep(1)
     print('1s')
-    time.sleep(1)
+    my_module1.sleep(1)
     print('0s')
-    time.sleep(1)
+    my_module1.sleep(1)
 
 if __name__ == '__main__':
     t1 = threading.Thread(target=run)

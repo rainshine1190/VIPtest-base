@@ -55,10 +55,10 @@ class Logger(object):
         self._logger.setLevel(logging.INFO)
 
         #判断是否已经有实例对象，如果没有的话再添加句柄，防止日志重复打印
-        if not self._logger.handlers:
-            #添加日志句柄
-            self._logger.addHandler(self._get_console_handler())
-            self._logger.addHandler(self._get_file_handler())
+        # if not self._logger.handlers:
+        #     #添加日志句柄
+        self._logger.addHandler(self._get_console_handler())
+        self._logger.addHandler(self._get_file_handler())
 
 
     def _get_console_handler(self):
@@ -92,3 +92,5 @@ logger = Logger().get_logger()
 
 if __name__ == '__main__':
     logger.info('1111')
+    logger.info('1112')
+    logger.info('1113')

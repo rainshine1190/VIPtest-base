@@ -9,12 +9,12 @@
 '''
 
 
-import unittest
+import my_module1
 from Practice.test_math import Math
 
 
 #继承unittest.TestCase
-class MyTest(unittest.TestCase):
+class MyTest(my_module1.TestCase):
 
     @classmethod
     def setUpClass(cls):
@@ -53,10 +53,10 @@ class MyTest(unittest.TestCase):
 # print('*******',__name__)
 if __name__ == '__main__':
     print('----------------------------------')
-    suite = unittest.TestSuite()
+    suite = my_module1.TestSuite()
     suite.addTest(MyTest('test_add1'))
     # suite.addTests(MyTest('test_add1'),MyTest('test_add2'))
     print('---suite',suite)
     # suite.addTest(MyTest.test_add1)
-    runner = unittest.TextTestRunner()
+    runner = my_module1.TextTestRunner()
     runner.run(suite)

@@ -1,4 +1,4 @@
-import time
+import my_module1
 
 
 try:
@@ -9,7 +9,7 @@ try:
             content = f.readline()
             if len(content) == 0:
                 break
-            time.sleep(2)
+            my_module1.sleep(2)
             print(content)
     except:
         # 如果在读取⽂文件的过程中，产⽣生了了异常，那么就会捕获到

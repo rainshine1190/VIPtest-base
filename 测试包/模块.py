@@ -1,11 +1,11 @@
 
 
-#导入包：import 模块名
-import math
-
-
-#引用：模块名.方法名()
-print(math.sqrt(9))
+# #导入包：import 模块名
+# import math as m
+#
+#
+# #引用：模块名.方法名()
+# print(m.sqrt(9))
 
 
 # #导入包：from 模块名 import 方法名

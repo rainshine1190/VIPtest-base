@@ -2,7 +2,7 @@
 
 
 import threading
-import time
+import my_module1
 
 class MyThread(threading.Thread):
     def __init__(self, n):
@@ -12,9 +12,9 @@ class MyThread(threading.Thread):
 
     def run(self):
         print("task", self.threadName)
-        time.sleep(1)
+        my_module1.sleep(1)
         print('跑呀%s'% self.n)
-        time.sleep(1)
+        my_module1.sleep(1)
         print('冲鸭%s'% self.n)
 
 if __name__ == "__main__":

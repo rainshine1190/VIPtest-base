@@ -1,8 +1,8 @@
 
-import unittest
+import my_module1
 from myfun import *
 
-class myTest(unittest.TestCase):
+class myTest(my_module1.TestCase):
 
 
     def setUp(self):
@@ -25,7 +25,7 @@ if __name__ == "__main__":
 
     #------------------------------2-使用testSuite添加指定方法执行
     #1-实例化testSuite
-    suite = unittest.TestSuite()
+    suite = my_module1.TestSuite()
     #2-调用addTest方法
     suite.addTest(myTest('test_add'))
 
@@ -35,6 +35,6 @@ if __name__ == "__main__":
 
     #执行测试套件
     #1-实例化
-    runner = unittest.TextTestRunner()
+    runner = my_module1.TextTestRunner()
     #2-调用run方法
     runner.run(suite)

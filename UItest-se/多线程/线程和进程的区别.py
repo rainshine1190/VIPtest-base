@@ -11,7 +11,7 @@ __author__ = 'lc'
 
 
 from threading import Thread
-import time
+import my_module1
 
 
 g_nums = [11,22,33]
@@ -22,7 +22,7 @@ def work1(nums):
 
 
 def work2(nums):
-    time.sleep(1)
+    my_module1.sleep(1)
     print('test2计算后的值：',nums)
 
 

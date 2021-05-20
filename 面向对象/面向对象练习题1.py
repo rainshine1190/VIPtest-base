@@ -20,7 +20,8 @@ class Cat(object):
     def drink(self,juice):
         print('小猫要喝%s'%juice)
 
-c = Cat()
-c.eat('fish')
-c.drink('water')
+if __name__ == '__main__':
+    c = Cat()
+    c.eat('fish')
+    c.drink('water')
 

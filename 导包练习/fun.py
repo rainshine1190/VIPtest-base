@@ -1,4 +1,4 @@
-from my_module1 import *
+from my_package import my_module1
 
-testA()
-testB()
+my_module1.info_print1()
+my_module2.info_print1()

@@ -64,6 +64,10 @@ class Gun():
         self.bullet_count -= 1
         print('发射子弹1发，还剩%d发' % self.bullet_count)
 
+g = Gun('Ak47')
+print(g.name,g.bullet_count)
+
+
 
 class Soilder:
 

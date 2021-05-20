@@ -2,12 +2,12 @@
 __author__ = 'lc'
 
 import threading
-import time
+import my_module1
 
 
 def test(param):
     try:
-        time.sleep(1)
+        my_module1.sleep(1)
         print(param)
 
     except Exception as msg:

@@ -7,7 +7,7 @@ __author__ = 'lc'
 
 
 from threading import Thread
-import time
+import my_module1
 
 g_num = 0
 

@@ -1,5 +1,5 @@
 import threading
-import time
+import my_module1
 
 g_num = 1000000
 

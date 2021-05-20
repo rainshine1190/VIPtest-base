@@ -7,15 +7,15 @@
 
 
 import threading
-import time
+import my_module1
 
 def run(n):
     #获取当前线程的名称
     threadName = threading.current_thread().getName()
     print("task",threadName)
-    time.sleep(1)
+    my_module1.sleep(1)
     print('跑呀',n)
-    time.sleep(1)
+    my_module1.sleep(1)
     print('冲鸭',n)
 
 if __name__ == '__main__':

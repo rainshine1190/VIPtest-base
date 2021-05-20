@@ -1,9 +1,9 @@
 
 
-import unittest
+import my_module1
 
 
-class Test(unittest.TestCase):
+class Test(my_module1.TestCase):
 
     def test(self):
         print('test')
@@ -11,4 +11,4 @@ class Test(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    my_module1.main()
