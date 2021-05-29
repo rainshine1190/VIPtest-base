@@ -1,11 +1,11 @@
 #coding:utf-8
 
-import my_module1
+import unittest
 
 from Pra_unittest.myfun import *
 
 
-class TestMyFun(my_module1.TestCase):
+class TestMyFun(unittest.TestCase):
     # TestCase基类方法,所有case执行之前自动执行
     @classmethod
     def setUpClass(cls):
@@ -30,7 +30,14 @@ class TestMyFun(my_module1.TestCase):
         self.assertEqual(1,2,'1!=2')
         self.assertNotEqual(3, add(2, 2))  # 测试业务方法add
 
+    def test_sub(self):
+        print('这里是运行的test开头的用例')
+        self.assertEqual(3, add(1, 2))
+        self.assertEqual(1,2,'1!=2')
+        self.assertNotEqual(3, add(2, 2))  # 测试业务方法add
+
+
 if __name__ == '__main__':
-    my_module1.main()
+    unittest.main(verbosity=1)
 
 

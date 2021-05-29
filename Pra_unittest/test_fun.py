@@ -1,10 +1,11 @@
 #coding:utf-8
 __author__ = 'lc'
 
-import my_module1,HTMLTestRunner
-from myfun import *
+import unittest
+# import HTMLTestRunner
+from Pra_unittest.myfun import *
 
-class myTest(my_module1.TestCase):
+class myTest(unittest.TestCase):
 
 
     def setUp(self):
@@ -15,7 +16,8 @@ class myTest(my_module1.TestCase):
 
     def test_add(self):
         print('执行test_add')
-        self.assertEqual(add(1,2),3)
+        real = add(1,2)
+        self.assertEqual(real,4)
 
     def test_mul(self):
         print('执行test_mul')
@@ -26,15 +28,16 @@ if __name__ == "__main__":
     # unittest.main()
     #------------------------------testSuite示例
     #实例化testSuite
-    suite = my_module1.TestSuite()
-    #调用addTest方法
+    suite = unittest.TestSuite()
+    # #调用addTest方法
     suite.addTest(myTest('test_add'))
-
+    # suite.addTest(myTest('test_mul'))
+    #
     print('suite内容：',suite)
-
-    #------------------------------testrunner示例
-    runner = my_module1.TextTestRunner()
-    runner = my_module1.TestRunner()
+    #
+    # #------------------------------testrunner示例
+    runner = unittest.TextTestRunner()
+    # runner = unittest.TestRunner()
     runner.run(suite)
 
 
