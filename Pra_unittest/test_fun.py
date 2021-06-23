@@ -17,7 +17,7 @@ class myTest(unittest.TestCase):
     def test_add(self):
         print('执行test_add')
         real = add(1,2)
-        self.assertEqual(real,4)
+        self.assertEqual(real,4,'两个参数不相等')
 
     def test_mul(self):
         print('执行test_mul')
@@ -25,20 +25,20 @@ class myTest(unittest.TestCase):
 
 if __name__ == "__main__":
     # 默认全部运行
-    # unittest.main()
+    unittest.main()
     #------------------------------testSuite示例
     #实例化testSuite
-    suite = unittest.TestSuite()
-    # #调用addTest方法
-    suite.addTest(myTest('test_add'))
-    # suite.addTest(myTest('test_mul'))
-    #
-    print('suite内容：',suite)
-    #
-    # #------------------------------testrunner示例
-    runner = unittest.TextTestRunner()
-    # runner = unittest.TestRunner()
-    runner.run(suite)
+    # suite = unittest.TestSuite()
+    # # #调用addTest方法
+    # suite.addTest(myTest('test_add'))
+    # # suite.addTest(myTest('test_mul'))
+    # #
+    # print('suite内容：',suite)
+    # #
+    # # #------------------------------testrunner示例
+    # runner = unittest.TextTestRunner()
+    # # runner = unittest.TestRunner()
+    # runner.run(suite)
 
 
     #--------------------------------通过HtmlTestRunner运行并生成测试报告

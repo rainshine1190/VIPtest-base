@@ -13,7 +13,7 @@ __author__ = 'lc'
 """
 from smtplib import SMTP
 # 发送html内容的邮件
-import smtplib, my_module1, os
+import smtplib, time, os
 from email.mime.text import MIMEText
 from email.header import Header
 
@@ -24,17 +24,21 @@ def sendMail():
 
     # 发送邮箱
     sender = 'rainshine1190@126.com'
-    # 接收邮箱
-    receiver = '421071642@qq.com'
+    # 接收邮箱，注意此处是单人发送，如果发送多人，需要将receiver变为列表即可
+    # receiver = '421071642@qq.com'
+    receiver = '615950764@qq.com,421071642@qq.com'
+    # receiver = ['615950764@qq.com','421071642@qq.com']
     # 发送邮件主题
-    t = my_module1.strftime("%Y-%m-%d %H:%M:%S", my_module1.localtime())
+    t = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     subject = '自动化测试结果_' + t
     # 发送邮箱服务器
     smtpserver = 'smtp.126.com'
     # 发送邮箱用户/密码
     username = 'rainshine1190'
-    #注意：如果邮箱从未开启过pop3/smtp服务，则需要进入邮箱设置开启，开启成功后会提示一个授权码，把此处的密码替换为生成的授权码即可
+    #注意：如果邮箱从未开启过pop3/smtp服务，则需要进入邮箱设置开启，开启成功后会提示一个授权码，
+    # 把此处的密码替换为生成的授权码即可
     password = 'IAVEGDPLRCJFEVON'
+
     # password = 'xxxx'
     #邮件内容
     content = 'Python 邮件发送测试...'
@@ -54,7 +58,7 @@ def sendMail():
         #3--登录邮箱
         s.login(username, password)
         #4--设置发件人，收件人，邮件内容
-        s.sendmail(sender, receiver, msg.as_string())
+        s.sendmail(sender, receiver.split(','), msg.as_string())
     except Exception as msg:
         print(u"邮件发送失败！%s"% msg)
     else:

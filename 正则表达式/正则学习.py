@@ -105,16 +105,68 @@ import re
 # print("groups()获取一个包含所有小组字符串的元组：", result.groups())
 
 
+# import re
+#
+# str1 = "2018-05-31"
+#
+# # [0-9]表示匹配单个数字0-9,+匹配前面的字符1个多个数字
+# result = re.search(r'^(\d{4})-(\d{2})-(\d{2})$', str1)
+# print("匹配后的结果对象为: ", result)
+# #
+# print("group()获取表达式匹配到的整体结果:", result.group())
+# print("group(1)获取第一组正则匹配到的结果", result.group(1))
+# print("group(2)获取第二组正则匹配到的结果", result.group(2))
+# print("group(2)获取第二组正则匹配到的结果", result.group(3))
+# print("groups()获取一个包含所有小组字符串的元组：", result.groups())
+
+
+#!/usr/bin / python
+#
+# import re
+#
+# line1 = "My phone num1 is 18601916518"
+# line2 = "18601916518 is My phone num2"
+# #( ^ \d + ) 表示匹配开头是数字的字符串一个或多个
+# matchObj = re.match(r'(\d+)', line1)
+#
+# if matchObj:
+#     print("matchObj.group() : ", matchObj.group())
+# else :
+#     print("No match!!")
+# print("-------------------------------------")
+# # (^\d+) 表示匹配开头是数字的字符串一个或多个，(\d+$)表示匹配数字结尾的一个或多个
+# matchObj = re.match(r'(\d+)', line2)
+# if matchObj:
+#     print("matchObj.group() : ", matchObj.group())
+#     print("matchObj.group(1) : ", matchObj.group(1))
+#     print("matchObj.groups() : ", matchObj.groups())
+# else:
+#     print("No match!!")
+
+
+# !/usr/bin/python
+# import re
+#
+# line = "SuperTesting is the No.1"
+#
+# result1 = re.match(r'(\d+)', line)
+# if result1:
+#     #group，正则表达式匹配的整个结果
+#     print("match --> result1.group() : ", result1.group())
+# else:
+#     print("No match!!")
+#
+# result2 = re.search(r'(\d+)', line)
+# if result2:
+#     print("search --> result2.group() : ", result2.group())
+# else:
+#     print("No match!!")
+
+
+# -*- coding: UTF-8 -*-
+
 import re
 
-str1 = "2018-05-31"
-
-# [0-9]表示匹配单个数字0-9,+匹配前面的字符1个多个数字
-result = re.search(r'^(\d{4})-(\d{2})-(\d{2})$', str1)
-print("匹配后的结果对象为: ", result)
-#
-print("group()获取表达式匹配到的整体结果:", result.group())
-print("group(1)获取第一组正则匹配到的结果", result.group(1))
-print("group(2)获取第二组正则匹配到的结果", result.group(2))
-print("group(2)获取第二组正则匹配到的结果", result.group(3))
-print("groups()获取一个包含所有小组字符串的元组：", result.groups())
+line = 'aaa bbb ccc;ddd   eee,fff'
+result = re.split(r"[\s,;]",line)
+print('result结果：',result)

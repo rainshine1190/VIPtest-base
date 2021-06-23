@@ -8,12 +8,14 @@
         c-setUpClass和tearDownClass
 '''
 import os
+import unittest
+
 import my_module1
 from Practice.test_math import Math
 
 
 #继承unittest.TestCase
-class MyTest(my_module1.TestCase):
+class MyTest(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
@@ -55,10 +57,12 @@ if __name__ == '__main__':
 
     test_dir = os.path.dirname(__file__)
     print(test_dir,'11111111111')
-    suite = my_module1.defaultTestLoader.discover(start_dir=test_dir, pattern='test*.py')
+    suite = unittest.defaultTestLoader.discover(start_dir=test_dir, pattern='test*.py')
+    # loader = unittest.TestLoader().discover()
+    print('--------',suite)
     # runner = unittest.TextTestRunner()
-    runner = my_module1.TestRunner()
-    runner.run(suite)
+    # runner = my_module1.TestRunner()
+    # runner.run(suite)
     # loader = unittest.TestLoader()
     # loader.discover()
 

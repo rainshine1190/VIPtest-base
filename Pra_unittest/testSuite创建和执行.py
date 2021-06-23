@@ -1,8 +1,9 @@
 
-import my_module1
+import unittest
 from myfun import *
+import test_fun
 
-class myTest(my_module1.TestCase):
+class myTest(unittest.TestCase):
 
 
     def setUp(self):
@@ -25,16 +26,19 @@ if __name__ == "__main__":
 
     #------------------------------2-使用testSuite添加指定方法执行
     #1-实例化testSuite
-    suite = my_module1.TestSuite()
+    suite = unittest.TestSuite()
     #2-调用addTest方法
-    suite.addTest(myTest('test_add'))
-
+    # suite.addTest(myTest('test_add'))
+    suite.addTest(myTest('test_mul'))
+    #加入其他模块的test方法
+    # suite.addTest(test_fun.myTest('test_mul'))
+    #加入多个test开头的方法
     # suite.addTests((myTest('test_add'),myTest('test_mul')))
     #查看suite的内容
     print('suite内：',suite)
 
     #执行测试套件
     #1-实例化
-    runner = my_module1.TextTestRunner()
-    #2-调用run方法
+    runner = unittest.TextTestRunner()
+    # #2-调用run方法
     runner.run(suite)
