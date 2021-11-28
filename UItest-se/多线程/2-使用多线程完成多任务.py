@@ -1,7 +1,7 @@
 #coding:utf-8
 __author__ = 'lc'
 
-import my_module1
+import time
 from threading import  Thread
 
 

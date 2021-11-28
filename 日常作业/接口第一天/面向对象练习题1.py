@@ -11,7 +11,6 @@
 #   2.2方法-吃鱼/喝水
 
 
-
 class Cat(object):
 
     def eat(self,food):

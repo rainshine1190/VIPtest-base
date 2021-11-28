@@ -1,7 +1,7 @@
 
 
 
-import my_module1
+import time
 import sys,os
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from ddt import ddt,data,unpack
@@ -13,7 +13,7 @@ print('str1---',str1)
 
 
 
-class testCase(my_module1.TestCase):
+class testCase(time.TestCase):
 
     # testdata = testData.fun()
     # print(testdata)
@@ -26,4 +26,4 @@ class testCase(my_module1.TestCase):
 
 
 if __name__ == '__main__':
-    my_module1.main()
+    time.main()

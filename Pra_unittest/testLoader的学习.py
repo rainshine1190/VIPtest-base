@@ -10,7 +10,7 @@
 import os
 import unittest
 
-import my_module1
+import unittest
 from Practice.test_math import Math
 
 
@@ -61,7 +61,7 @@ if __name__ == '__main__':
     # loader = unittest.TestLoader().discover()
     print('--------',suite)
     # runner = unittest.TextTestRunner()
-    # runner = my_module1.TestRunner()
+    # runner = unittest.TestRunner()
     # runner.run(suite)
     # loader = unittest.TestLoader()
     # loader.discover()

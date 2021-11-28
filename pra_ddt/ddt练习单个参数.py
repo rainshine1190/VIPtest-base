@@ -5,7 +5,7 @@ __author__ = 'lc'
 
 
 import  unittest
-from ddt import ddt,data,unpack
+# from ddt import ddt,data,unpack
 
 list1 = [5,6,7]
 

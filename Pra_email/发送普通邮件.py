@@ -25,8 +25,8 @@ def sendMail():
     # 发送邮箱
     sender = 'rainshine1190@126.com'
     # 接收邮箱，注意此处是单人发送，如果发送多人，需要将receiver变为列表即可
-    # receiver = '421071642@qq.com'
-    receiver = '615950764@qq.com,421071642@qq.com'
+    receiver = '421071642@qq.com'
+    # receiver = '615950764@qq.com,421071642@qq.com'
     # receiver = ['615950764@qq.com','421071642@qq.com']
     # 发送邮件主题
     t = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
@@ -35,7 +35,7 @@ def sendMail():
     smtpserver = 'smtp.126.com'
     # 发送邮箱用户/密码
     username = 'rainshine1190'
-    #注意：如果邮箱从未开启过pop3/smtp服务，则需要进入邮箱设置开启，开启成功后会提示一个授权码，
+    #注意：如果邮箱从未开启过pop3/smtp服务，则需要进入邮箱设置开启，开启成功后会提示一个授权码，一定要复制并保存下来，只会出现一次
     # 把此处的密码替换为生成的授权码即可
     password = 'IAVEGDPLRCJFEVON'
 
@@ -49,7 +49,7 @@ def sendMail():
     msg['From'] = sender
     msg['To'] = receiver
 
-    #第三步：登录并发送邮件
+    #第三步：连接登录并发送邮件
     try:
         #1--实例化smtp类
         s = smtplib.SMTP()
@@ -58,9 +58,11 @@ def sendMail():
         #3--登录邮箱
         s.login(username, password)
         #4--设置发件人，收件人，邮件内容
-        s.sendmail(sender, receiver.split(','), msg.as_string())
+        s.sendmail(sender, receiver, msg.as_string())
+        #多个收件人需要split
+        # s.sendmail(sender, receiver.split(','), msg.as_string())
     except Exception as msg:
-        print(u"邮件发送失败！%s"% msg)
+        print("邮件发送失败！%s"% msg)
     else:
         print("邮件发送成功！")
     finally:

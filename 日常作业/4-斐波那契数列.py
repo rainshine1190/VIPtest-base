@@ -37,13 +37,17 @@
 
 #------------------------------第二种写法
 
-a = b = 1
-list1 = []
+# a = b = 1
+# list1 = []
+#
+# for i in range(5):
+#     c = a + b
+#     list1.append(c)
+#     a = b
+#     b = c
+#
+# print([1,1]+list1)
 
-for i in range(5):
-    c = a + b
-    list1.append(c)
-    a = b
-    b = c
 
-print([1,1]+list1)
+
+#------------------------------

@@ -3,7 +3,7 @@ __author__ = 'lc'
 
 
 
-import requests,my_module1
+import requests,time
 from threading import Thread
 
 i = 0
@@ -31,7 +31,7 @@ def http_get():
 
 L = []
 
-start_time = my_module1.time()
+start_time = time.time()
 for j in range(1000):
 
     t = Thread(target=http_get)

@@ -1,13 +1,13 @@
 
-import my_module1
+import unittest
 from ddt import ddt,data,unpack,file_data
 
 @ddt
-class TestMy(my_module1.TestCase):
+class TestMy(unittest.TestCase):
 
     @file_data('D:\\code\\VIPbase\\pra_ddt\\data.json')
     def test_fun(self,value):
         print(value)
 
 if __name__ == '__main__':
-    my_module1.main()
+    unittest.main()

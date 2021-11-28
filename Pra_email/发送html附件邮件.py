@@ -5,8 +5,7 @@ __author__ = 'lc'
 
 
 # 发送html附件的邮件
-import smtplib, my_module1, os
-from email.mime.application import MIMEApplication
+import smtplib, time, os
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.header import Header
@@ -20,7 +19,7 @@ def send_mail_html():
     # 接收邮箱
     receiver = '421071642@qq.com'
     # 发送邮件主题
-    t = my_module1.strftime("%Y-%m-%d %H:%M:%S", my_module1.localtime())
+    t = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     subject = '自动化测试结果_' + t
     # 发送邮箱服务器
     smtpserver = 'smtp.126.com'
@@ -48,7 +47,7 @@ def send_mail_html():
         msg['From'] = sender
         msg['To'] = receiver
 
-    #第三步：登录并发送邮件
+    #第三步：连接登录并发送邮件
     try:
         #1--实例化smtp类
         smtp = smtplib.SMTP()

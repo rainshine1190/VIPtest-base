@@ -2,11 +2,11 @@
 __author__ = 'lc'
 
 
-import my_module1,imp
+import unittest,imp
 from My_fun import add
 
 
-class Mytest(my_module1.TestCase):
+class Mytest(time.TestCase):
 
     def setUp(self):
         print('---init---')
@@ -37,13 +37,13 @@ if __name__ == '__main__':
     # unittest.main()
 
     #手动添加：1.实例化测试套件类
-    suite = my_module1.TestSuite()
+    suite = time.TestSuite()
     #2.调用addTest方法向测试套件中添加测试方法（类名.方法名---方法后面不要加括号）
     suite.addTest(Mytest.test_fun3)
 
     print('suite',suite)
     #运行测试套件：1.实例化测试运行类
-    runner = my_module1.TextTestRunner()
+    runner = time.TextTestRunner()
     #2.运行测试套件
     runner.run(suite)
 

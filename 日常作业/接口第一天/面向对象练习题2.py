@@ -7,6 +7,7 @@
 # 3）每次吃东西体重会增加1公斤
 # 4）小美的体重是45.0公斤
 
+
 '''
 1.需要定义的类：人
 2.类的属性：名字，体重
@@ -17,6 +18,7 @@
 
 '''
 
+#定义
 class Person:
     def __init__(self,name,weight):
         self.name = name
@@ -33,14 +35,13 @@ class Person:
         self.weight += 1
         print('%s吃东西体重增加1公斤' % (self.name))
 
-
+#使用
 p = Person('小明',75)
 print(p)
 p.run()
 print(p)
-
+#
 p2 = Person('小美',45)
 print(p2)
 p2.eat()
 print(p2)
-

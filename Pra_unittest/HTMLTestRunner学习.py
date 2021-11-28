@@ -20,12 +20,12 @@
 #coding:utf-8
 __author__ = 'lc'
 
-import my_module1
+import unittest
 from HTMLTestRunner import HTMLTestReportCN
 
 from myfun import *
 
-class myTest(my_module1.TestCase):
+class myTest(unittest.TestCase):
 
     def setUp(self):
         print('执行setup方法')
@@ -43,10 +43,10 @@ if __name__ == "__main__":
     # 默认全部运行
     # unittest.main()
     #生成测试报告
-    suite = my_module1.TestSuite()
+    suite = unittest.TestSuite()
     suite.addTest(myTest('test_add'))
     filename = "test.html"
     fp = open(filename,'wb')
-    runner = HTMLTestReportCN(stream=fp, title='单元测试报告', description='我是描述')
+    runner = HTMLTestReportCN(stream=fp, title='单元测试报告标题', description='我是描述')
     runner.run(suite)
     fp.close()

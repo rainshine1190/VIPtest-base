@@ -1,4 +1,5 @@
 #coding:utf-8
+#-----看做开发写好的接口代码/函数、方法---被测代码
 
 def add(a, b):
     return a+b

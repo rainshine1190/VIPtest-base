@@ -213,12 +213,140 @@ run：weight - xx斤
 #
 # sheet.cell_value()
 
-list1 = ['1','2','3']
-list2 = [3,4,5]
+# list1 = ['1','2','3']
+# list2 = [3,4,5]
+#
+# dict1 = {list1[i]:list2[i] for i in range(len(list2))}
+# print(dict1)
+#
 
-dict1 = {list1[i]:list2[i] for i in range(len(list2))}
-print(dict1)
+
+
+# def num1 (a,b):
+#     sum = input("输入的数组：")
+#     for i in sum:
+#         a = b+a
+#         b = a
+#         a = b
+#         i +=1
+#         return
+# num1(5)
+
+#
+# lis1 = [1,2,3,4,5,5,2,3,2,4]
+#
+# for i in lis1:
+#     lis1.count(i)
+#     lis1.pop(i)
+#     lis1.sort()
+# print(lis1)
+# 运行结果为：
+# [1, 2, 3, 4, 5]
 
 
 
+# str ="welocme to super&Test"
+# i = str.split(' ')
+# str_list = []
+# while(i >= 0):
+#     str_list.append(str[i])
+#     i = i - 1
+# print(''.join(str_list))
 
+
+# a =1
+# b =1
+# for i in range(10):
+#     a ,b = b ,(a+b)
+#     print(a)
+
+
+
+# glo_list=[]
+#
+# def main():
+#     print('----------------------------')
+#     print('---1-注册；2-查询；3-退出------')
+#     print('----------------------------')
+#     a = int(input('请选择您要的功能：'))
+#     if a == 1:
+#         add_user()
+#     elif a == 2:
+#         panduan()
+#     elif a == 3:
+#         print('退出系统')
+#         exit()
+#     else:
+#         print('请输入合法字符！')
+#
+#
+#
+# def add_user():
+#     global glo_list
+#     n = input('请输入您要注册的用户名: ')
+#     p = input('请输入该用户密码: ')
+#     dict01 = {}
+#     dict01['name'] = n
+#     dict01['password'] = p
+#     glo_list.append(dict01)
+#     main()
+#
+#
+# def panduan():
+#     global glo_list
+#     n = input('请输入您要查询的用户名: ')
+#     for i in glo_list:
+#         if i['name'] == n:
+#             print('该用户已存在')
+#             main()
+#     else:
+#         print('该用户不存在')
+#         main()
+#
+#
+#
+# if __name__ == '__main__':
+#     main()
+
+
+
+# from selenium import webdriver
+#
+#
+#
+# driver = webdriver.Chrome()
+# driver.get('http://www.baidu.com')
+# data = driver.find_element_by_id('id="hotsearch-content-wrapper"').get_attribute('innerHTML')
+# print('---------',data)
+
+#----------------递归判断是否有嵌套的json
+#
+# data = {"data":{"admin": {'a':1},"chapterTops":[],"coinCount":0,"collectIds":[17666,17675,12554,18965],"email":"","icon":"","id":17180,"nickname":"liangchao","password":"","publicName":"liangchao","token":"","type":0,"username":"liangchao"},"errorCode":0,"errorMsg":""}
+#
+# #有出口，当发现没有嵌套的json时就结束，传入的每一个key对应的value不是dict时
+#
+# def fun(**kwargs):
+#     print(f'传入的数据为：{kwargs}')
+#     for i in kwargs.keys():
+#         print('kwargs[i]:',i,kwargs[i])
+#         if isinstance(kwargs[i],dict):
+#             print('有嵌套json')
+#             fun(**kwargs[i])
+#
+#
+#
+#
+# #自己调用自己
+# fun(**data)
+
+
+# dictory={"key1":"value1","key2":"value2"}
+#
+# if isinstance(dictory,dict):
+#     print('dict')
+
+start = 5
+end = 6
+
+re = (start+end>>1)
+print(re)

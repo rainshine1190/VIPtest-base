@@ -1,9 +1,9 @@
 
 
 
-import my_module1
+import time
 
 
-my_module1.sleep(1)
+time.sleep(1)
 
 print('-------------')

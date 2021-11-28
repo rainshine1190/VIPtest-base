@@ -50,13 +50,13 @@
 #     print("没有这个⽂文件")
 
 
-# import testA.my_module1 as t1
+# import testA.time as t1
 #
-# # testA.my_module1 .test1()
+# # testA.time .test1()
 # t1.test1()
 
 
-from testA import my_module1
+from testA import time
 
-# testA.my_module1 .test1()
-my_module1.test1()
+# testA.time .test1()
+time.test1()

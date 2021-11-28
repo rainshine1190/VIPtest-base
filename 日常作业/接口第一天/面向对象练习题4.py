@@ -8,6 +8,7 @@
 # 3）.枪 能够 发射子弹(把子弹发射出去)
 # 4）.枪 能够 装填子弹 --增加子弹的数量
 
+
 '''
 需求分析
 
@@ -66,7 +67,7 @@ class Gun():
             print('发射子弹1发，还剩%d发' % self.bullet_count)
         else:
             print('%s子弹不足，需要装填子弹' % self.name)
-            self.add_bullet()
+            # self.add_bullet()
 
 
 class Soilder:
@@ -74,24 +75,19 @@ class Soilder:
     def __init__(self,name):
         self.name = name
 
-
     def __str__(self):
         return "士兵%s" % self.name
 
     def fire(self,item):
-        item.shot()
+        item.shot(self.name)
+
 
 
 AK = Gun("AK47")
-
-print(AK.name)
-print(AK.bullet_count)
-AK.add_bullet()
-
-
+print(AK)
 
 s = Soilder('瑞恩')
-s.fire(AK)
+s.fire()
 
 
 
