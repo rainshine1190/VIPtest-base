@@ -3,7 +3,7 @@ __author__ = 'lc'
 
 
 import unittest,imp
-from My_fun import add
+from My_fun import *
 
 
 class Mytest(time.TestCase):
@@ -19,7 +19,7 @@ class Mytest(time.TestCase):
 
     def test_fun2(self):
         print('测试方法2')
-        re = add(1,2)
+        re = sub(1,2)
         print(re)
 
     def test_fun3(self):

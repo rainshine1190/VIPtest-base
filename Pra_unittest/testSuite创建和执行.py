@@ -5,7 +5,6 @@ import test_fun
 
 class myTest(unittest.TestCase):
 
-
     def setUp(self):
         print('执行setup方法')
 

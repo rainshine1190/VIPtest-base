@@ -5,7 +5,7 @@ from ddt import ddt,data,unpack,file_data
 @ddt
 class TestMy(unittest.TestCase):
 
-    @file_data('D:\\code\\VIPbase\\pra_ddt\\data.json')
+    @file_data('D:\\code\\VIPtest-base\\pra_ddt\\data.json')
     def test_fun(self,value):
         print(value)
 

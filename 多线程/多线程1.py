@@ -1,6 +1,6 @@
 '''
 1-导入包
-2-定义多线程执行函数
+2-定义多线程被执行函数
 3-创建多线程
 4-启动多线程
 '''
@@ -29,3 +29,4 @@ if __name__ == '__main__':
     t2 = threading.Thread(target=run,name='threadt2')
     t1.start()
     t2.start()
+    print('主线程结束了')

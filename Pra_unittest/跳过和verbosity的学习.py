@@ -3,13 +3,14 @@
 import unittest
 
 from Pra_unittest.myfun import *
-
+a = 1
 
 class TestMyFun(unittest.TestCase):
     # TestCase基类方法,所有case执行之前自动执行
     @classmethod
     def setUpClass(cls):
         print("这里是所有测试用例前的准备工作")
+        cls.a = 1
 
     # TestCase基类方法,所有case执行之后自动执行
     @classmethod
@@ -37,7 +38,10 @@ class TestMyFun(unittest.TestCase):
     def test_divide(self):
         self.assertEqual(2, divide(6, 3))  # 测试业务方法divide
         self.assertEqual(2.5, divide(5, 2))
-
+    @unittest.skipIf(a>0,'条件不通过')
+    def test_skip(self):
+        print('我被跳过了')
+        self.assertEqual(1,1)
 
 
 if __name__ == '__main__':

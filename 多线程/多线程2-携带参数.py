@@ -12,11 +12,11 @@ import time
 def run(n):
     #获取当前线程的名称
     threadName = threading.current_thread().getName()
-    print("task",threadName)
+    print(f"task：{threadName} ")
     time.sleep(1)
-    print('跑呀',n)
+    print(f'跑呀,{n} ')
     time.sleep(1)
-    print('冲鸭',n)
+    print(f'冲鸭,{n} ')
 
 if __name__ == '__main__':
     #多线程传参，注意如果是单个参数必须包含逗号（元组）
@@ -24,3 +24,4 @@ if __name__ == '__main__':
     t2 = threading.Thread(target=run, args=("t2",))
     t1.start()
     t2.start()
+    print('主线程结束了')
