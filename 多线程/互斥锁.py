@@ -12,11 +12,13 @@ g_num = 1000000
 
 def work1():
     global g_num
+    #获取锁
     lock.acquire()
     # time.sleep(0.1)
     for i in range(500000):
         g_num -= 1
     print("in work1 g_num is : %d" % g_num)
+    #释放锁
     lock.release()
 
 def work2():

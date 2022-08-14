@@ -20,8 +20,11 @@ def run(n):
 
 if __name__ == '__main__':
     #多线程传参，注意如果是单个参数必须包含逗号（元组）
-    t1 = threading.Thread(target=run, args=("t1",),daemon=True)
-    t2 = threading.Thread(target=run, args=("t2",),daemon=True)
+    t1 = threading.Thread(target=run, args=("t1",))
+    t2 = threading.Thread(target=run, args=("t2",))
     t1.start()
     t2.start()
+    # join方法让主线程等待子线程结束再结束
+    t1.join()
+    t2.join()
     print('主线程结束了')

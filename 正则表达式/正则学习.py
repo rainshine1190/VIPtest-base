@@ -7,7 +7,7 @@
 """
 # !/usr/bin/python
 # -*- coding: UTF-8 -*-
-
+import os
 import re
 
 # result = re.findall('(\d+)', '010 是北京市的区号，110不是')
@@ -167,6 +167,13 @@ import re
 
 import re
 
-line = 'aaa bbb ccc;ddd   eee,fff'
-result = re.split(r"[\s,;]",line)
-print('result结果：',result)
+# line = 'aaa bbb ccc;ddd   eee,fff'
+# result = re.split(r"[\s,;]",line)
+# print('result结果：',result)
+
+
+import re
+pattern = re.compile(r' (\d*?)\n')
+str = os.popen('netstat -ano|findstr 80').read()
+
+print(re.findall(pattern,str))

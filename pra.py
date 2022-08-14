@@ -345,8 +345,42 @@ run：weight - xx斤
 # if isinstance(dictory,dict):
 #     print('dict')
 
-start = 5
-end = 6
+# start = 5
+# end = 6
+#
+# re = (start+end>>1)
+# print(re)
 
-re = (start+end>>1)
-print(re)
+
+# a = 1
+# print(id(a))
+# b = a
+# print(id(b))
+# a = a + 1
+# print(id(a))
+# c = 1
+# print(id(c))
+
+a = 1
+b = a
+c = 1
+print(id(a))
+print(id(b))
+print(a == b)
+print(a is b)
+print(a is c)
+
+a = 257
+b = 257
+print(id(a))
+print(id(b))
+print(a == b)
+print(a is b)
+print(a is c)
+
+a = [1, 2, 3]
+b = [1, 2, 3]
+print(a, b)
+print(a == b)
+print(id(a), id(b))
+print(a is b)

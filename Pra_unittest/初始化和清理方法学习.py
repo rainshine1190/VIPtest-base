@@ -8,20 +8,21 @@ class TestMyFun(unittest.TestCase):
     # TestCase基类方法,所有case执行之前自动执行
     @classmethod
     def setUpClass(cls):
-        print("这里是所有测试用例前的准备工作")
+        print("这里是所有测试用例前的准备工作setUpClass")
 
     # TestCase基类方法,所有case执行之后自动执行
     @classmethod
     def tearDownClass(cls):
-        print("这里是所有测试用例后的清理工作")
+        print("这里是所有测试用例后的清理工作tearDownClass")
 
     # TestCase基类方法,每次执行case前自动执行
     def setUp(self):
-        print("这里是一个测试用例前的准备工作")
+        print("这里是一个测试用例前的准备工作setUp")
 
     # TestCase基类方法,每次执行case后自动执行
     def tearDown(self):
-        print("这里是一个测试用例后的清理工作")
+        print("这里是一个测试用例后的清理工作tearDown")
+
 
     def test_add(self):
         print('这里是运行的test开头的用例')
