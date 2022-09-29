@@ -32,5 +32,5 @@ cookie = {
 }
 
 # #请求收藏的接口
-r2 = requests.get(url=url2,cookies = cookie)
+r2 = requests.get(url=url2,cookies = cookie,auth=('liangchao',123456))
 print(r2.text)

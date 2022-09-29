@@ -6,6 +6,7 @@
 '''
 
 import threading
+# from threading import Thread
 import time
 
 def run():
@@ -14,11 +15,11 @@ def run():
     :return:
     """
     # 获取当前线程的名称
-    print(f"task-{threading.current_thread().getName()}")
+    time.sleep(2)
+    # threading.current_thread().getName()---获取当前线程的名字，默认Thread-n，n代表序号
+    print(f'{threading.current_thread().getName()}---2s   ')
     time.sleep(1)
-    print('2s')
-    time.sleep(1)
-    print('1s')
+    print(f'{threading.current_thread().getName()}---1s   ')
 
 if __name__ == '__main__':
     # 创建线程

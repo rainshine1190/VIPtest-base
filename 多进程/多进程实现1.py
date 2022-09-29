@@ -20,7 +20,7 @@ def test(x, y):
     """执行脚本，执行过程需要等待2s"""
     print('~~~~')
     time.sleep(2)
-    print( x + y)
+    print(f'{x} + {y}')
 
 
 if __name__ == '__main__':
@@ -34,11 +34,13 @@ if __name__ == '__main__':
 
     re = []
     #通过for循环建立多个进程
-    for i in range(n):
-        res = pool.apply_async(test, (2, 3)) # 阻塞 主进程      同步
+    for i in range(4):
+        res = pool.apply_async(test, (2, i))
+        # res = pool.apply(test, (2, i))
         re.append(res)
-
-    # 通过get方法获取执行结果
+    #
+    # # 通过get方法获取执行结果
     for i in re:
         i.get()
+
     print("finished!")
