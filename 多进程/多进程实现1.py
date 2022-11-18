@@ -29,18 +29,19 @@ if __name__ == '__main__':
     pool = Pool(n)
     # apply(self, func, args=(), kwds={})
     # apply(self,func,*args,**kwds)
-    # result = pool.apply(test, (2, 3), {'z': 1}) # 阻塞 主程序（主进程） 同步
+    res1 = pool.apply(test, (2, 3)) # 阻塞 主程序（主进程） 同步
     # res1 = pool.apply_async(test, (2, 3)) # 不阻塞 主程      异步
 
-    re = []
-    #通过for循环建立多个进程
-    for i in range(4):
-        res = pool.apply_async(test, (2, i))
-        # res = pool.apply(test, (2, i))
-        re.append(res)
-    #
-    # # 通过get方法获取执行结果
-    for i in re:
-        i.get()
+    # re = []
+    # #通过for循环建立多个进程
+    # for i in range(4):
+    #     res = pool.apply_async(test, (2, i))
+    #     # res = pool.apply(test, (2, i))
+    #     re.append(res)
+    # #
+    # # # 通过get方法获取执行结果
+    # for i in re:
+    #     i.get()
 
     print("finished!")
+    # res1.get()

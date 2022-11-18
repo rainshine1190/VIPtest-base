@@ -423,27 +423,91 @@
 #
 
 
-#2、跟踪非局部变量值  PySnooper 是以函数为单位进行调试的，它默认只会跟踪函数体内的局部变量，
-# 若想跟踪全局变量，可以给 pysnooper.snoop() 加上 watch 参数
-import pysnooper
+# #2、跟踪非局部变量值  PySnooper 是以函数为单位进行调试的，它默认只会跟踪函数体内的局部变量，
+# # 若想跟踪全局变量，可以给 pysnooper.snoop() 加上 watch 参数
+# import pysnooper
+#
+# out = {"foo": "bar"}
+# @pysnooper.snoop(watch='out["foo"]')
+# def demo_func():
+#     dict_list = dict()
+#     dict_list["name"] = "dyf"
+#     dict_list["age"] = 18
+#     dict_list["gender"] = "female"
+#     return dict_list
+# demo_func()
+#
+# #和 watch 相对的，pysnooper.snoop() 还可以接收一个函数 watch_explode，
+# # 表示除了这几个参数外的其他所有全局变量都监控。
+# @pysnooper.snoop(watch_explode=('foo', 'bar'))
+# def demo_func():
+#     dict_list = dict()
+#     dict_list["name"] = "dyf"
+#     dict_list["age"] = 18
+#     dict_list["gender"] = "female"
+#     return dict_list
+# demo_func()
 
-out = {"foo": "bar"}
-@pysnooper.snoop(watch='out["foo"]')
-def demo_func():
-    dict_list = dict()
-    dict_list["name"] = "dyf"
-    dict_list["age"] = 18
-    dict_list["gender"] = "female"
-    return dict_list
-demo_func()
+import abc
 
-#和 watch 相对的，pysnooper.snoop() 还可以接收一个函数 watch_explode，
-# 表示除了这几个参数外的其他所有全局变量都监控。
-@pysnooper.snoop(watch_explode=('foo', 'bar'))
-def demo_func():
-    dict_list = dict()
-    dict_list["name"] = "dyf"
-    dict_list["age"] = 18
-    dict_list["gender"] = "female"
-    return dict_list
-demo_func()
+
+# 创建抽象类
+class Animal(metaclass=abc.ABCMeta):
+    # 移动接口
+    @abc.abstractmethod
+    def move(self):
+        pass
+
+    # 进食接口
+    @abc.abstractmethod
+    def eat(self):
+        pass
+
+
+# 定义人类
+class Human(Animal):
+    # 移动接口
+    def move(self):
+        print("Human is walking")
+
+    # 进食接口
+    def eat(self):
+        print("Human is eating")
+
+
+# 定义狗类
+class Dog(Animal):
+    # 移动接口
+    def move(self):
+        print("Dog is running")
+
+    # 进食接口
+    def eat(self):
+        print("Dog is eating")
+
+
+# 定义猫类
+class Cat(Animal):
+
+    def move(self):
+        print('paole')
+
+    # 移动接口
+    def run(self):
+        print("Dog is running")
+
+    # 进食接口
+    def eat(self):
+        print("Dog is eating")
+
+
+
+if __name__ == '__main__':
+    # 实例化得到一个人和一条狗
+    h1 = Human()
+    d1 = Dog()
+    c1 = Cat()  # TypeError: Can't instantiate abstract class Cat with abstract method move
+    # 调用移动接口
+    h1.move()
+    d1.move()
+    c1.move()
