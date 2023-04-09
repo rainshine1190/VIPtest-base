@@ -34,13 +34,16 @@ if __name__ == '__main__':
     pool = Pool(n)
     # apply(self, func, args=(), kwds={})
     # apply(self,func,*args,**kwds)
-    # result = pool.apply(test, (2, 3), {'z': 1}) # 阻塞 主程序（主进程） 同步
-    # res1 = pool.apply_async(test, (2, 3)) # 不阻塞 主程      异步
-
+    # pool.apply(test1, (2, 3)) # 阻塞 主程序（主进程） 同步
+    # res1 = pool.apply_async(test1, (2, 3)) # 不阻塞 主程      异步
+    # print("finished!")
+    # res1.get()
     re = []
     for i in range(n):
-        res = pool.apply_async(test, (2, 3)) # 阻塞 主进程      同步
+        res = pool.apply_async(test1, (2, 3)) # 阻塞 主进程      同步
         re.append(res)
+    print("finished!")
     for i in re:
         i.get()
-    print("finished!")
+
+    print('end')

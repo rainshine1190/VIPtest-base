@@ -21,6 +21,7 @@ def sub_thread():
 
 
 t1 = threading.Thread(target=daemon_thread)
+# t1 = threading.Thread(target=daemon_thread,daemon=True)
 t1.setDaemon(True)
 
 # t2 = threading.Thread(target=sub_thread)
