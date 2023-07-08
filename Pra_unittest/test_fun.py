@@ -7,6 +7,7 @@ from Pra_unittest.myfun import *
 #继承unittest.TestCase
 class myTest(unittest.TestCase):
 
+
     def setUp(self):
         print('执行setup方法')
 

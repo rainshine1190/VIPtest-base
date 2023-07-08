@@ -920,14 +920,198 @@ max = 0
 #             if i >= len(strs[j]) or strs[j][i] != strs[0][i]:
 #                 return strs[0][:i]
 #     return strs[0]
+#
+# strs = ["flower","flow","flight"]
+# print(main(strs))
+#
+# def main(strs):
+#     if not strs:
+#         return ''
+#     for i in range(strs[0]):
+#         for j in range(1,len(strs)):
+#             if i >= len(strs[j]) or strs[j][i] != strs[j][i]:
+#                 return strs[0][j]
 
-strs = ["flower","flow","flight"]
-print(main(strs))
+"""
 
-def main(strs):
-    if not strs:
-        return ''
-    for i in range(strs[0]):
-        for j in range(1,len(strs)):
-            if i >= len(strs[j]) or strs[j][i] != strs[j][i]:
-                return strs[0][j]
+1,1,2,3,5,8
+
+1,2,3,4,5,6,7,8,9,……100
+
+100的累加和=100+99的累加和
+99的累加和=99+98的累计和
+98的累加和=98+97的累加和
+……
+2的累加和=2+1的累加和
+1的累加和=1
+
+"""
+
+# =============================
+# 1.递归实现斐波那契数列
+# def fun1(n):
+#     if n == 0:
+#         return 1
+#     if n == 1:
+#         return 1
+#     else:
+#         return fun1(n - 1) + fun1(n - 2)
+#
+#
+# list1 = []
+
+# for i in range(20):
+#     list1.append(fun1(i))
+# print(list1)
+#
+#
+# # 2.递归实现100累加和
+# def fun2(sum):
+#     if sum == 1:
+#         return 1
+#     return sum + fun2(sum - 1)
+#
+# print(fun2(100))
+
+
+#
+# # 3
+#
+#
+# l1 = [9, 9, 9]
+# sum = 0
+# n = len(l1) - 1
+# for i in l1:
+#     sum = sum + (10 ** n) * i
+#     n = n - 1
+# sum = sum + 1
+# str1 = str(sum)
+# l1.clear()
+# for i in str1:
+#     l1.append(i)
+#
+# print(l1)
+
+
+
+"""
+给定一个由 整数 组成的 非空 数组所表示的非负整数，在该数的基础上加一。
+最高位数字存放在数组的首位， 数组中每个元素只存储单个数字。
+你可以假设除了整数 0 之外，这个整数不会以零开头。
+
+示例 1：
+
+输入：digits = [1,2,3]
+输出：[1,2,4]
+解释：输入数组表示数字 123。
+
+示例 2：
+输入：digits = [4,3,2,1]
+输出：[4,3,2,2]
+解释：输入数组表示数字 4321。
+
+示例 3：
+输入：digits = [0]
+输出：[1]
+
+示例4：
+输入：digits =[9]
+输出：[1,0]
+
+示例5：
+输入：digits=[9,9,9]
+输出：[1,0,0,0]
+
+提示：
+
+1 <= digits.length <= 100
+0 <= digits[i] <= 9
+
+"""
+
+# import functools
+#
+# list1 = [1,2,3]
+# list1 = map(str(),list1)
+#
+# cash = int(input("请输入您的消费金额："))
+# if 2000>cash>=1000:
+#     print(f'您优惠后的金额是：{cash*0.95}')
+# elif 3000>cash>=2000:
+#     print(f'您优惠后的金额是：{cash*0.9}')
+# elif 5000>cash>=3000:
+#     print(f'您优惠后的金额是：{cash*0.85}')
+# elif cash>=5000:
+#     print(f'您优惠后的金额是：{cash*0.8}')
+
+
+"""
+其思路是先统计每个字符在字符串中出现的次数，然后计算可以构成回文串的字符数量，
+最后根据奇偶性判断是否还需要添加一个单独的字符作为中心点。如果字符的出现次数是偶数，
+则可以作为加进回文串的长度，如果字符的出现次数是奇数，则在其数量上减1加进回文串的长度，
+最后判断是否出现过奇数，如果出现过则可以放在回文串的中信位置，在回文串的长度加1。
+
+"""
+
+# def findNum(s):
+#     #定义一个字典，保存每个字符出现的次数
+#     dict1 = {}
+#
+#     for i in s:
+#         dict1[i] = s.count(i)
+#     #判断字典的每个value是奇数还是偶数
+#     strLen = flag = 0
+#     for j in dict1.values():
+#         #如果是偶数，则累加进回文串长度中
+#         if j % 2 == 0:
+#             strLen += j
+#         # 否则该数-1后，类加进回文串长度中，标记奇数是否出现过
+#         else:
+#             strLen += j-1
+#             flag = 1
+#     #循环结束后，判断奇数标记是否为True，则+1
+#     if flag:
+#         strLen += 1
+#
+#     return strLen
+#
+# print(findNum('aaaaaccc'))
+
+# import numpy as np
+# # 创建一个二维数组
+# arr = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15]])
+
+# 访问数组中的元素
+# print(arr[0, 0])  # 输出1
+# print(arr[1, 2])  # 输出8
+
+# 切片
+# print(arr[0:1, 0:2])  # 输出[[1 2]]
+# print(arr[0:2, 0:1])  # 输出[[1] [6]]
+# print(arr[0:1, 0:2])  # 输出[[1] [6]]
+# print(arr[0:2, 0:2])  # 输出[[1 2] [6 7]]
+
+#
+# X = np.array([[0,1,2,3],[10,11,12,13],[20,21,22,23],[30,31,32,33]])
+#
+# print(X[0:1,0:2])
+# print(X[0:2,0:1])
+
+#
+def findNum(list1,target):
+
+    left = 0
+    right = len(list1)-1
+    while left <= right:
+        mid = (left + right) // 2
+        if target > list1[mid]:
+            left = mid + 1
+        elif target < list1[mid]:
+            right = mid -1
+        else:
+            return mid
+    else:
+        return -1
+
+arr = list(range(1,100))
+print(findNum(arr, 50))
