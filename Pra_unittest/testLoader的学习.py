@@ -33,7 +33,7 @@ class MyTest(unittest.TestCase):
         expect = d.add1()
         self.assertEqual(expect,3)
 
-    # @unittest.skip
+
     def test_add2(self):
         print('执行add2方法')
         print('--2')
@@ -56,13 +56,12 @@ class MyTest(unittest.TestCase):
 if __name__ == '__main__':
 
     test_dir = os.path.dirname(__file__)
-    print(test_dir,'11111111111')
     suite = unittest.defaultTestLoader.discover(start_dir=test_dir, pattern='test*.py')
     # loader = unittest.TestLoader().discover()
     print('--------',suite)
     # runner = unittest.TextTestRunner()
-    # runner = unittest.TestRunner()
-    # runner.run(suite)
+    runner = unittest.TextTestRunner()
+    runner.run(suite)
     # loader = unittest.TestLoader()
     # loader.discover()
 

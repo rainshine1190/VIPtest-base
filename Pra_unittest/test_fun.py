@@ -7,7 +7,6 @@ from Pra_unittest.myfun import *
 #继承unittest.TestCase
 class myTest(unittest.TestCase):
 
-
     def setUp(self):
         print('执行setup方法')
 
@@ -19,28 +18,31 @@ class myTest(unittest.TestCase):
         #调用被测方法
         real = add(1,2)
         #断言实际结果和预期结果
-        self.assertEqual(real,4,'两个参数不相等')
+        self.assertEqual(real,3,'两个参数不相等,断言失败!')
 
+    # @unittest.skip('无条件跳过')
+    # @unittest.skipIf(2>1,'2>1条件满足')
+    # @unittest.skipUnless(1<2,'1>2条件不满足')
     def test_mul(self):
         print('执行test_mul')
         self.assertEqual(multi(1,2),2,'和预期不符')
 
 if __name__ == "__main__":
     # 默认全部运行
-    # unittest.main()
+    unittest.main(verbosity=1)
     #------------------------------testSuite示例
-    #实例化testSuite
-    suite = unittest.TestSuite()
-    # #调用addTest方法
-    suite.addTest(myTest('test_add'))
-    suite.addTest(myTest('test_mul'))
-    # #
-    # print('suite内容：',suite)
-    # #
-    # #------------------------------testrunner示例
-    runner = unittest.TextTestRunner()
-    # # runner = unittest.TestRunner()
-    runner.run(suite)
+    # #实例化testSuite
+    # suite = unittest.TestSuite()
+    # # #调用addTest方法
+    # suite.addTest(myTest('test_add'))
+    # # # suite.addTest(myTest('test_mul'))
+    # # # #
+    # # print('suite内容：',suite)
+    # # # #
+    # # # #------------------------------testrunner示例
+    # runner = unittest.TextTestRunner()
+    # # # runner = unittest.TestRunner()
+    # runner.run(suite)
 
 
     #--------------------------------通过HtmlTestRunner运行并生成测试报告

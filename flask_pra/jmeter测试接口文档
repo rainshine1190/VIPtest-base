@@ -1,0 +1,42 @@
+当然，我在每个接口的描述中都添加了 `Content-Type` 头信息。
+
+### 登录接口 (`/login`)
+
+- **请求方式：** POST
+- **Content-Type：** `application/x-www-form-urlencoded`
+- **参数：** 提交表单数据包括 'userid' 和 'password'。
+- **成功响应：** 返回包含用户信息的JSON，并设置 'userid' 的Cookie。
+- **失败响应：** 返回包含错误消息的JSON。
+
+### 个人信息接口 (`/profile`)
+
+- **请求方式：** GET
+- **Content-Type：** 无
+- **成功响应：** 返回包含用户信息的JSON，根据Cookie中的 'userid'。
+
+### 查询商品信息接口 (`/get_product`)
+
+- **请求方式：** GET
+- **Content-Type：** 无
+- **参数：** 通过查询参数传递 'productid'。
+- **成功响应：** 返回包含商品信息的JSON。
+
+### 提交订单接口 (`/submit_order`)
+
+- **请求方式：** POST
+- **Content-Type：** `application/json`
+- **参数：** 提交JSON数据包括 'productid'。
+- **成功响应：** 在用户的订单列表中添加订单，返回成功消息的JSON。
+- **失败响应：** 返回包含错误消息的JSON。
+
+### 查询订单接口 (`/get_orders`)
+
+- **请求方式：** GET
+- **Content-Type：** 无
+- **成功响应：** 返回用户订单列表的JSON，根据Cookie中的 'userid'。
+
+### 运行应用程序
+
+- 使用 `python 文件名.py` 启动应用程序，默认运行在 `http://0.0.0.0:5000/`。
+
+希望这样更符合您的期望。

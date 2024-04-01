@@ -1,3 +1,16 @@
+"""
+线程创建默认非守护线程daemon=false
+非守护线程不会跟着主线程结束而结束
+
+守护线程会让子线程跟着主线程结束而结束
+
+设置守护线程的方法：
+创建线程时：daemon=True
+创建线程后,启动前：t1.setDaemon=True
+
+"""
+
+
 import threading
 import time
 
@@ -10,10 +23,10 @@ def run(n):
     print(f'冲鸭,{n} ')
 
 if __name__ == '__main__':
-    # #第一种：让子线程跟着主线程一起结束，通过设置守护线程来实现（1-daemon传参；2-调用setDaemon）
-    # t1 = threading.Thread(target=run, args=("t1",),daemon=True) #1-通过daemon传参设置守护线程
-    t1 = threading.Thread(target=run, args=("t1",))  # 1-通过daemon传参设置守护线程
-    t1.setDaemon(True)   #2-通过调用setDaemon把子进程设置为守护线程，必须在start()之前设置
+    #第一种：让子线程跟着主线程一起结束，通过设置守护线程来实现（1-daemon传参；2-调用setDaemon）
+    t1 = threading.Thread(target=run, args=("t1",),daemon=True) #1-通过daemon传参设置守护线程
+    # t1 = threading.Thread(target=run, args=("t1",))  # 1-通过daemon传参设置守护线程
+    # t1.setDaemon(True)   #2-通过调用setDaemon把子进程设置为守护线程，必须在start()之前设置
     t1.start()
     # t1.join()
     #第二种：让主线程等待子线程执行完，通过join阻塞主线程实现
@@ -22,3 +35,4 @@ if __name__ == '__main__':
     # t2.start()
     # t2.join()            #设置主线程等待子线程
     print("主线程结束了")
+

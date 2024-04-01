@@ -173,7 +173,8 @@ import re
 
 
 import re
-pattern = re.compile(r' (\d*?)\n')
-str = os.popen('netstat -ano|findstr 80').read()
-
+pattern = re.compile(r'(\d*?)\n')
+str = '1234jflsjlsr3445435'
+# str = os.popen('netstat -ano|findstr 80').read()
+#
 print(re.findall(pattern,str))

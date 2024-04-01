@@ -17,14 +17,16 @@ def run(i):
 
 
 if __name__ == '__main__':
+    # 创建空列表用来存放线程对象
     tlist = []
+    # 遍历创建线程，放入列表
     for i in range(100):
         t = threading.Thread(target=run,args=(i,))
         tlist.append(t)
-
+    # 遍历列表，挨个启动
     for i in tlist:
         i.start()
-
+    # 遍历列表，挨个阻塞
     for i in tlist:
         i.join()
 

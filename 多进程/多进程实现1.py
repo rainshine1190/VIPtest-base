@@ -42,14 +42,15 @@ if __name__ == '__main__':
     #通过for循环建立多个子进程
     for i in range(5):
         res = pool.apply_async(test, (2, i))
-        # res = pool.apply(test, (2, i))
+        # pool.apply(test, (2, i))
         re.append(res)
 
     print("finished!")
-
-    # # 通过get方法获取执行结果
-    for i in re:
-        i.get()
-
+    pool.close()
+    pool.join()
+    # 通过get方法获取执行结果
+    # for i in re:
+    #     i.get()
+    #
     print("end!")
 

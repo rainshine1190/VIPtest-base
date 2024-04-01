@@ -91,5 +91,5 @@ for i in range(1, max_number + 1):
             datalist = hlist+llist
             print(datalist)
             hlist, llist = [], []
-            with open('num.txt','a+') as fp:
+            with open('data.txt', 'a+') as fp:
                 fp.write(str(datalist).strip("'[").strip("]'").replace(',','').replace("'",'')+'\n')

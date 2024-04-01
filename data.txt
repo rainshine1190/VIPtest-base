@@ -1,1 +1,3 @@
-heloworld
+Nov 15 17:31:39 acu-sanxian-jd-pvt-master gaia_camera[1047]:/root/codes/baidu_acu_gaia_sanxian/baidu/acvMAX96717CheckPresence(brdcstsercDI) failed-
+Nov 15 17:31:39 acu-sanxian-jd-pvt-master gaia_camera[1047]:/root/codes/baidu_acu_gaia_sanxian/baidu/actgaia_camera[1047]Severity30Moduleid2 : SetupAddressTranslations failed with SIPLSto
+Nov 15 17:31:39 acu-sanxian-jd-pvt-mastergaia_camera[1047]:2:Severity30Module_id2:Nov 15 17:31:39 acu-sanxian-jd-pvt-masterNov 15 17:31:39 acu-sanxian-jd-pvt-master gaia_camera[1047]:Severity30Module_idModule_id 30 SeverityNov 15 17:31:39 acu-sanxian-jd-pvt-master gaia_camera[1047]:Nov 15 17:31:39 acu-sanxian-jd-pvt-master gaia_camera[1047]:

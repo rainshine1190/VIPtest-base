@@ -7,7 +7,7 @@ from myfun import *
 
 class Testfun1(unittest.TestCase):
 
-    def test_cdd(self):
+    def test_add(self):
         print('执行add')
         self.assertEqual(3, add(1, 2))
         self.assertNotEqual(3, add(2, 2))  # 测试业务方法add
@@ -31,8 +31,8 @@ if __name__ == '__main__':
     unittest.main()
     # # unittest.main(verbosity=2)
     # #创建测试套件suite1--添加Testfun1单元测试类中的被测方法
-    # suite1 = unittest.TestSuite()
-    # suite1.addTest(Testfun1("test_minus"))
+    suite1 = unittest.TestSuite()
+    suite1.addTest(Testfun1("test_bminus"))
     # #创建测试套件suite2--添加Testfun2单元测试类中的被测方法
     # suite2 = unittest.TestSuite()
     # suite2.addTest(Testfun2("test_multi"))
@@ -45,5 +45,5 @@ if __name__ == '__main__':
     # print('---',suite)
     #
     # #运行总的测试套件
-    # runner = unittest.TextTestRunner()
-    # runner.run(suite)
+    runner = unittest.TextTestRunner()
+    runner.run(suite1)

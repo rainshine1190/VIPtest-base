@@ -27,12 +27,12 @@ if __name__ == "__main__":
     #1-实例化testSuite
     suite = unittest.TestSuite()
     #2-调用addTest方法
-    # suite.addTest(myTest('test_add'))
+    suite.addTest(myTest('test_add'))
     suite.addTest(myTest('test_mul'))
     #加入其他模块的test方法
-    # suite.addTest(test_fun.myTest('test_mul'))
+    suite.addTest(test_fun.myTest('test_mul'))
     #加入多个test开头的方法
-    # suite.addTests((myTest('test_add'),myTest('test_mul')))
+    suite.addTests((myTest('test_add'),myTest('test_mul')))
     #查看suite的内容
     print('suite内：',suite)
 

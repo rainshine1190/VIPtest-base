@@ -38,6 +38,7 @@ from ddt import ddt,data,unpack
 
 test_dict = [{'value1':1,'value2':1},{'value1':3,'value2':4}]
 
+
 @ddt
 class Mytest1(unittest.TestCase):
 

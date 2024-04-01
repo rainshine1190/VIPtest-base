@@ -26,7 +26,7 @@ def run():
 if __name__ == '__main__':
     # 创建线程
     t1 = threading.Thread(target=run)
-    t2 = threading.Thread(target=run, name='threadt2')
+    t2 = threading.Thread(target=run, name='tt2')
     # 启动线程
     t1.start()
     t2.start()
